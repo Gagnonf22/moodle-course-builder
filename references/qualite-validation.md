@@ -2,6 +2,12 @@
 
 Lire pour préparer les essais d'un livrable ou diagnostiquer un écart. Choisir les contrôles qui couvrent les fonctions touchées ; ne pas rejouer une validation exhaustive pour une correction de texte sans effet fonctionnel.
 
+## Relecture de l'expérience
+
+À chaque phase, appliquer les points UX de [la démarche](conception-cours.md) : KISS, choix d'activités, titres, séparation des deux publics et contenu propre à l'étape. En phase 4, relire sections et activités comme un apprenant, avant toute livraison : dépliants et boutons non vides, médias présents, pas de code interne ni de note de chantier, consignes regroupées, remise réelle pour la pratique. Exemple : la trace et la coche annoncées correspondent ; contre-exemple : Page cochée supposée prouver une remise.
+
+Un contrôle automatique de signalements est prévu mais non livré à ce stade. Il ne remplacera ni la relecture ni l'essai. Les réserves techniques, captures d'essai et statuts vont dans les fichiers du responsable ; ils ne s'affichent pas dans le cours. Les liens suivent la [convention documentée](concevoir-section.md#liens-et-changements-donglet), distincte d'une obligation WCAG.
+
 ## Avant l'instance
 
 Contrôler les fichiers et liens, formats attendus, intégrité des médias, dépendances et paramètres fonctionnels. Relire les questions et sous-titres sur le fond. Les scripts de la chaîne ont des tests locaux ; leur succès ne remplace ni la relecture pédagogique ni un essai Moodle.
@@ -27,15 +33,15 @@ Ne rechercher une trace technique xAPI, une règle cron ou un événement serveu
 
 ## Visuel et accessibilité
 
-Appliquer la phase 3 de [conception-cours.md](conception-cours.md) : direction visuelle choisie sur la section pilote, puis maquette de chaque section. Deux ou trois directions sont proposées lorsqu'une direction nouvelle est nécessaire ; une direction approuvée peut être reprise sur accord humain. Une variante légère pour sections répétitives nécessite également cet accord.
+Appliquer la phase 3 de [conception-cours.md](conception-cours.md) : direction visuelle choisie sur la section pilote, puis maquette de chaque section. Deux ou trois directions sont proposées lorsqu'une direction nouvelle est nécessaire ; la direction et l’attestation du cours de référence approuvé sont reprises par défaut. Une variante légère pour sections répétitives nécessite également cet accord.
 
 Identifier version, format, thème et comportement de l'éditeur avant de choisir des classes ou composants. Bootstrap 5 ne doit pas être présumé. Après sauvegarde, rouvrir le HTML pour voir ce que l'éditeur a conservé ; les scripts et composants interactifs d'une maquette ne sont pas automatiquement fonctionnels dans Moodle.
 
 L'expérience utilisateur guide les choix ; les composants du thème et de Bootstrap servent à réaliser la direction retenue, sans imposer leur apparence par défaut. Utiliser des titres sémantiques, liens explicites, textes alternatifs utiles, contraste lisible et sous-titres relus. Vérifier le clavier et le focus pour les actions principales, la lisibilité sur petit écran et le téléchargement des documents. Ne pas placer les consignes essentielles uniquement dans une illustration.
 
-Chaque maquette utilise le texte du brouillon validé, avec médias provisoires identifiés, et montre les vues écran/mobile et les états utiles : avant/après achèvement, attente ou verrou si pertinent. Pour chaque activité requise, l'action et le déclencheur de la coche sont compréhensibles en amont ; l'état obtenu peut être constaté ensuite. Une attente de correction humaine ne doit pas être présentée comme une coche immédiate.
+Chaque maquette utilise le texte du brouillon validé et montre les vues écran/mobile et les états utiles. Les médias provisoires sont identifiés au responsable, hors du contenu final de l’apprenant. Montrer les états pertinents : avant/après achèvement, attente ou verrou si pertinent. Pour chaque activité requise, l'action et le déclencheur de la coche sont compréhensibles en amont ; l'état obtenu peut être constaté ensuite. Une attente de correction humaine ne doit pas être présentée comme une coche immédiate.
 
-Identifier ce qui est simulé et ce qui a été vérifié dans Moodle. L'essai visuel précoce de la section pilote vérifie le rendu et la conservation par l'éditeur ; la phase 4b vérifie le fonctionnement du cours complet. Faire approuver une adaptation qui change une maquette déjà validée.
+Conserver dans le projet les **captures du rendu réel** : fournies par le responsable dans son site, ou automatiques dans un Moodle local quand l’environnement le permet. Un blocage de capture n’autorise pas son contournement ; le thème local peut différer. Les captures du site cible restent la validation finale du rendu. Identifier pour le responsable ce qui est simulé et ce qui est vérifié ; ne pas superposer les réserves au cours. L'essai visuel précoce de la section pilote vérifie le rendu et la conservation par l'éditeur ; la phase 4b vérifie le fonctionnement du cours complet. Faire approuver une adaptation qui change une maquette déjà validée.
 
 Préférer les composants disponibles et styles autorisés ; une modification du thème ou du CSS global exige un périmètre de déploiement distinct du contenu éditorial. [Thèmes Moodle](https://moodledev.io/docs/5.0/apis/plugintypes/theme), [Bootstrap, si la version est applicable](https://getbootstrap.com/docs/5.3/).
 

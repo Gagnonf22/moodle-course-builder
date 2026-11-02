@@ -2,6 +2,14 @@
 
 Lire cette référence pour encoder une copie vidéo, préparer un VTT ou fabriquer un paquet **Interactive Video / Question Set**. Pour l'intégration dans les sections et le suivi Moodle, lire ensuite la référence dédiée ; un paquet valide hors ligne n'atteste pas la note ou l'achèvement dans Moodle.
 
+## Réutiliser une vidéo et illustrer les manipulations
+
+Avant une nouvelle production, examiner une vidéo existante en ligne : intégration dans la description de section, ou ressource URL si nécessaire. Un éditeur H5P peut accepter une source en ligne compatible, selon fournisseur et version ; l'essayer sur le site autorisé. Les scripts inclus attendent des médias locaux : la possibilité dans un éditeur n'est pas une entrée URL de `construire_h5p.py`. Ne pas télécharger une vidéo sans droits ni autorisation.
+
+Vérifier disponibilité sous rôle apprenant, sous-titres, intégration autorisée et dépendance au service. Prévoir des captures annotées et une consigne textuelle pour les manipulations. Exemple : réutiliser une démonstration accessible et montrer la commande à repérer ; contre-exemple : exiger une vidéo neuve ou laisser un cadre vide.
+
+Voir [Moodle : vidéo](https://docs.moodle.org/501/en/Video) et le [guide Interactive Video](https://h5p.org/tutorial-interactive-video). Ces sources expliquent des voies d'édition, pas une preuve de leur fonctionnement dans le site cible.
+
 ## Prérequis et portée
 
 Python ≥ 3.13. FFmpeg est requis pour encoder ou générer une affiche ; fournir `--ffmpeg` ou `FFMPEG_EXE` s'il n'est pas dans le PATH. Aucun téléchargement de vidéo ni envoi vers un service externe n'est effectué. La transcription initiale n'est pas créée par ces scripts : fournir un brouillon VTT issu d'un outil autorisé, puis le relire avec la vidéo.

@@ -1,5 +1,13 @@
 # Historique
 
+## Non publié — 2026-11-02 — U1, conception de l'expérience
+
+- Description de section comme page principale, KISS, titres d'action, contenu propre à chaque étape et absence de composants vides.
+- Outil de choix : H5P intégré pour l'entraînement, test natif pour évaluer, Devoir avec trace pour pratiquer, Glossaire pour le lexique ; Page/Livre limités aux besoins de lecture, Leçon à éviter.
+- Expérience contrôlée aux phases 1 à 4b, séparation des deux publics, direction visuelle et attestation de référence reprises par défaut ; règles de questions et relecture des distracteurs.
+- Dossier de projet distinct, vidéos en ligne et captures annotées, maquettes depuis captures réelles ; convention des liens distinguée des exigences WCAG 2.2.
+- Exemple de plan aligné sur les capacités réellement livrées et les compléments encore à éprouver. Documentation seulement : aucun script, contrat, test ou générateur modifié ; aucune publication.
+
 ## 0.7.0 — 2026-11-01
 
 - Refonte en français : entrée courte et aiguillage vers les références utiles, matrice tâche/prérequis/preuve/limites et exemples synthétiques.

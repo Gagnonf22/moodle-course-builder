@@ -2,6 +2,16 @@
 
 **Moyen :** activité native Devoir (`assign`) dans le site autorisé. Le constructeur local inclut un profil individuel texte/fichier avec grille ou guide : [contrat v2](contrat-structure.md). Lire pour demander une production et permettre sa remise, plutôt que publier uniquement une consigne. Pour des réglages hors de ce profil, passer par une interface ou API autorisée sans les supprimer silencieusement.
 
+## Pratiquer et remettre une trace
+
+Tout atelier, laboratoire ou exercice pratique est un **Devoir avec remise d'une trace**, corrigé ou non. Joindre les fichiers de départ à la consigne (fichiers supplémentaires du Devoir) ; ne pas ajouter une ressource Fichier et une Page pour un seul exercice. Le résultat attendu peut être une capture, un fichier ou une explication.
+
+Choisir explicitement : **achèvement à la remise sans correction obligatoire** pour une pratique, ou **achèvement sur réussite** avec note suffisante pour un travail évalué. Dans le premier cas, une trace finalisée peut déclencher la coche sans attente d'un correcteur ; dans le second, montrer l'attente puis le résultat. Ne pas ajouter une grille et une charge de correction par défaut à toute pratique.
+
+**Exemple :** « Téléchargez le fichier joint, réalisez l'opération et remettez une capture ; la remise déclenche la coche ». **Contre-exemple :** Page « Atelier » avec auto-déclaration manuelle, sans canal de dépôt.
+
+Ces règles sont de conception. Le profil actuel doit être consulté dans [capacites.md](capacites.md) et le [contrat](contrat-structure.md) : fichiers supplémentaires et pratique sans correction attendent leurs essais et compléments techniques ; ne pas les déclarer fabriqués sur la seule foi de cette page.
+
 ## Préparer le contrat de travail
 
 Décrire l'action attendue, le livrable, les critères de réussite, les ressources et le retour prévu. Définir texte en ligne ou fichiers, formats/nombre/taille utiles, travail individuel ou de groupe, dates si nécessaires et modalités de nouvelle remise. Une capture peut témoigner d'une réalisation ; vérifier qu'elle montre ce qui doit être évalué et qu'elle n'expose pas de données inutiles.
@@ -27,4 +37,4 @@ Avec données fictives : déposer sous un rôle apprenant, finaliser si nécessa
 
 Pour une restauration, vérifier en plus fichiers de consigne, plugins et définitions de correction ; l'absence volontaire des anciens travaux est normale dans une sauvegarde de modèle sans participants.
 
-**Résultat :** une activité de remise utilisable, un mode de correction cohérent et un retour accessible. Profil local éprouvé le 2026-11-01 sur Moodle 5.1.8+ : construction, sauvegarde/restauration, trois modes de remise, guide et grilles conservés. Remises et corrections effectuées via API natives sous comptes fictifs étudiant/enseignant, sans écriture directe des résultats en base. État remis/non corrigé incomplet ; note insuffisante échouée ; note suffisante réussie. Affichage apprenant et correcteur essayé séparément. Ce succès ne couvre pas les groupes, annotations PDF ni tout paramétrage de Devoir.
+**Résultat :** une activité de remise utilisable, une correction seulement si prévue et un retour accessible. La preuve ci-dessous porte sur le profil noté, pas sur la pratique sans correction. Profil local éprouvé le 2026-11-01 sur Moodle 5.1.8+ : construction, sauvegarde/restauration, trois modes de remise, guide et grilles conservés. Remises et corrections effectuées via API natives sous comptes fictifs étudiant/enseignant, sans écriture directe des résultats en base. État remis/non corrigé incomplet ; note insuffisante échouée ; note suffisante réussie. Affichage apprenant et correcteur essayé séparément. Ce succès ne couvre pas les groupes, annotations PDF ni tout paramétrage de Devoir.

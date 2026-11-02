@@ -7,11 +7,11 @@ description: Créer un cours Moodle, le concevoir, le réviser ou examiner une s
 
 Transformer le besoin en un cours modifiable et vérifiable. Adapter la forme aux objectifs et au public : une vidéo interactive, un devoir, un Livre et un test natif répondent à des besoins différents.
 
-Pour créer un cours, appliquer la [démarche de cocréation](references/conception-cours.md) et le [modèle de base](references/modele-cours-de-base.md) : socle commun, activités de sections adaptées aux objectifs. La personne responsable valide chaque phase ; le plan justifie les choix et écarts au socle et distingue fabrication par la skill et création manuelle dans Moodle. Une petite modification reprend seulement les phases pertinentes. Concevoir l'UX et le visuel avant de choisir leur réalisation dans le thème.
+Pour créer un cours, appliquer la [démarche de cocréation](references/conception-cours.md) et le [modèle de base](references/modele-cours-de-base.md) : socle commun, activités de sections adaptées aux objectifs. La personne responsable valide chaque phase ; le plan justifie les choix et écarts au socle et distingue fabrication par la skill et création manuelle dans Moodle. Une petite modification reprend seulement les phases pertinentes. Valider l’expérience utilisateur à chaque phase ; reprendre par défaut la direction et l’attestation du cours de référence approuvé. Concevoir l’UX avant de choisir sa réalisation dans le thème.
 
 ## Commencer
 
-Reprendre le plan, les décisions et les sources déjà présents dans le projet. Identifier la demande : concevoir, fabriquer un contenu, intervenir dans Moodle, examiner une sauvegarde ou corriger un problème. Ne charger que la référence utile ci-dessous.
+Créer ou reprendre un dossier de projet propre au cours, distinct de la skill : sources, `DECISIONS.md` et `ROADMAP.md`. Réutiliser son organisation existante. Reprendre le plan, les décisions et les sources déjà présents dans le projet. Identifier la demande : concevoir, fabriquer un contenu, intervenir dans Moodle, examiner une sauvegarde ou corriger un problème. Ne charger que la référence utile ci-dessous.
 
 Pour une intervention dans Moodle, relever version, rôle, format, thème et composants nécessaires à cette intervention. Pour un travail hors ligne, consigner les inconnues qui affecteront l'import ; ne pas exiger un accès au site pour rédiger un plan ou fabriquer un média.
 
@@ -21,7 +21,8 @@ Choisir la voie réellement disponible : interface Moodle, service autorisé, sc
 
 | Besoin | Lire seulement ce qui s'applique |
 |---|---|
-| Concevoir un cours, choisir sa structure et ses activités | [conception-cours.md](references/conception-cours.md) |
+| Concevoir un cours, choisir sa structure et ses activités | [conception-cours.md](references/conception-cours.md) ; [outil de choix](references/modele-cours-de-base.md#choisir-les-activités) |
+| Organiser une section, ses titres, médias et actions selon KISS | [concevoir-section.md](references/concevoir-section.md) |
 | Savoir ce qui est déjà automatisé et choisir la voie de réalisation | [capacites.md](references/capacites.md) |
 | Créer sections, Pages, Livres, fichiers ou navigation | [structure-ressources.md](references/structure-ressources.md) |
 | Encoder une vidéo, préparer un VTT, construire Interactive Video ou Question Set | [chaine-video-h5p.md](references/chaine-video-h5p.md) |
@@ -40,7 +41,7 @@ Choisir la voie réellement disponible : interface Moodle, service autorisé, sc
 - Préserver les sources. Identifier les objets par des clés de projet stables ; relever ou remapper leurs identifiants Moodle, sans recopier ceux d'un autre cours.
 - Distinguer paquet H5P, banque de contenus, activité source, affichage intégré, tentative, note et achèvement. Vérifier les liens nécessaires au besoin réel.
 - Ne jamais simplifier silencieusement une question, sa notation ou les dépendances d'une activité pour la rendre exportable.
-- Conserver contenus de cours, identifiants, données de participants et secrets dans le projet autorisé. Les exemples livrés ici sont synthétiques.
+- Séparer les deux publics : cours utilisable pour l’apprenant, choix/statuts/réserves dans les fichiers du responsable. Les données d’exercice peuvent être inventées sans étiqueter le produit « fictif ». Conserver données et secrets uniquement dans les emplacements autorisés ; les exemples de la skill restent synthétiques.
 - L'autorisation de préparer des fichiers ne vaut pas autorisation d'installer, d'envoyer ou de publier. Les scripts PHP inclus restent réservés à une validation locale ; voir leurs limites avant usage.
 
 ## Livrer

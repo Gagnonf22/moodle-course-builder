@@ -10,6 +10,8 @@ Pour un **glossaire**, décider si les entrées sont fournies ou produites par l
 
 ## Leçon
 
+**À éviter dans la conception par défaut** : les écrans et retours ajoutent de la navigation. Pour un entraînement sans enjeu, privilégier le H5P intégré selon l’[outil de choix](modele-cours-de-base.md#choisir-les-activités). Exemple : un scénario sur place ; contre-exemple : une Leçon de trois clics pour une question. Le profil technique ci-dessous reste disponible pour un besoin explicitement validé.
+
 Dessiner les pages, choix, destinations et conditions de sortie avant la saisie. Créer les pages puis associer les sauts aux pages effectivement créées ; conserver les clés logiques dans le projet. Vérifier chaque branche, les retours et la possibilité d'atteindre la fin, avec score/achèvement si utilisés. Ne pas conserver les identifiants de saut d'une leçon source.
 
 Le [profil local v4](contrat-parcours-v4.md) fabrique une Leçon de pratique non notée, pages de contenu et questions à choix unique, sauts par clés remappées et achèvement en atteignant la fin. Construction/sauvegarde/restauration et une branche entière en navigateur ont été éprouvées le 2026-11-01 sur Moodle 5.1.8+ local. Les autres types de pages, toutes les branches, reprises et règles de notation ne sont pas couverts par cette preuve.

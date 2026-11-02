@@ -8,9 +8,11 @@ Le travail suit les phases conception, brouillon, maquettes, finalisation, essai
 
 Une section pilote permet de valider le contenu puis la direction visuelle avant de décliner le cours. Pour une nouvelle direction, l'IA propose deux ou trois variantes. Chaque section dispose ensuite d'une maquette HTML sur écran et mobile ; une forme allégée exige un accord humain. L'expérience utilisateur et l'accessibilité guident le choix des composants du thème.
 
-Le **socle par défaut** comprend l'accueil, l'explication de l'achèvement avant chaque activité requise, une évaluation finale avec seuil, une attestation après réussite et une rétroaction. Le plan confirme ce socle ou justifie les adaptations pour validation. Le contenu des sections est choisi selon les objectifs : vidéo interactive H5P, Livre, Devoir, test natif ou autre activité pertinente. Chaque choix indique la fabrication disponible et les manipulations manuelles nécessaires.
+Le **socle par défaut** comprend l'accueil, l'explication de l'achèvement avant chaque activité requise, une évaluation finale avec seuil, une attestation après réussite et une rétroaction. Le plan confirme ce socle ou justifie les adaptations pour validation. Le contenu reste d’abord dans la description de section : H5P intégré pour s’entraîner sans conséquence, test natif autocorrigé pour évaluer, Devoir avec trace pour pratiquer, Glossaire pour le lexique. Page seulement pour une longue lecture, Livre rarement, Leçon à éviter. Reprendre par défaut direction visuelle et attestation du cours de référence approuvé ; l’expérience utilisateur se valide à chaque phase. Chaque choix indique la fabrication disponible et les manipulations manuelles nécessaires.
 
-Voir [la démarche complète](references/conception-cours.md), [le modèle de base](references/modele-cours-de-base.md) et [l'exemple de plan](assets/exemple-plan-cours.md).
+Les nouvelles règles de conception ne livrent pas automatiquement leurs extensions techniques : consulter les capacités ; les développements UX restent en cours, non publiés.
+
+Voir [Concevoir une section](references/concevoir-section.md), [la démarche complète](references/conception-cours.md), [le modèle de base](references/modele-cours-de-base.md) et [l'exemple de plan](assets/exemple-plan-cours.md).
 
 ## Capacités et preuves
 

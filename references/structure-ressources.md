@@ -6,14 +6,14 @@
 
 Relever pour chaque objet : clé stable de projet, nom, section, contenu ou fichier source, visibilité, chemin d'accès prévu et achèvement souhaité. Distinguer section d'accueil, sections de travail et éventuelles ressources communes. Choisir le format du cours selon la navigation voulue et les composants du site ; un export `tiles` ou `recit` n'assure pas que ce format sera disponible ailleurs.
 
-Créer ou repérer les sections dans le cours autorisé. Insérer une courte orientation et une prochaine action compréhensible. Créer les ressources en conservant leurs sources éditables ; relever les identifiants retournés seulement dans le projet. Après enregistrement, rouvrir les contenus pour détecter les transformations de l'éditeur et les liens rompus.
+Créer ou repérer les sections dans le cours autorisé. En faire la page principale selon [Concevoir une section](concevoir-section.md) : contenu riche et propre à chaque étape, objectifs, points clés, médias intégrés, consigne et coche expliquée avant chaque activité requise. Créer les ressources en conservant leurs sources éditables ; relever les identifiants retournés seulement dans le projet. Après enregistrement, rouvrir les contenus pour détecter les transformations de l'éditeur et les liens rompus.
 
 | Objet | Contenu à préparer | Contrôle utile |
 |---|---|---|
-| Zone de texte et média / résumé de section | Orientation courte, titre sémantique, liens | La section reste lisible et les liens mènent à des objets accessibles |
-| Page | Un contenu cohérent, médias et textes alternatifs | Images enregistrées dans la bonne zone de fichiers ; rendu après réouverture |
-| Livre | Chapitres ordonnés et sous-chapitres si nécessaires | Sommaire, précédent/suivant, médias de chaque chapitre |
-| Fichier | Document source, format et nom explicites | Téléchargement possible, document lisible ; alternative si le format est inaccessible |
+| Zone de texte et média / résumé de section | Page principale : bandeau, objectifs, points clés, consignes, intégrations | La section reste lisible et les liens mènent à des objets accessibles |
+| Page | Longue lecture justifiant de quitter la section, médias et textes alternatifs | Images enregistrées dans la bonne zone de fichiers ; rendu après réouverture |
+| Livre | Rarement : longue référence en plusieurs chapitres ; justifier la navigation ajoutée | Sommaire, précédent/suivant, médias de chaque chapitre |
+| Fichier | Document à télécharger/utiliser, Word ou PDF mis en forme ; jamais .txt sauf licence | Téléchargement possible, document lisible ; alternative si le format est inaccessible |
 | Dossier | Ensemble utile de fichiers organisés | Aucun fichier essentiel enfoui sans explication |
 | URL | Adresse, titre, rôle de la ressource, solution de repli si nécessaire | Accès sous le rôle prévu ; authentification et pérennité ne sont pas présumées |
 

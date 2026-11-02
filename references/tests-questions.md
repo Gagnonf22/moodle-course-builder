@@ -2,6 +2,18 @@
 
 Lire pour une activité `quiz` et sa banque. Un Question Set H5P et l'activité de sondage Questionnaire sont des objets distincts. Le constructeur local fournit un profil [banque qbank et test natif, contrat v3](contrat-tests-natifs.md) pour quatre types ; les autres passent par une interface ou un outil autorisé. Aucun exporteur générique Moodle XML/GIFT/QTI n'est inclus.
 
+## Choisir pour évaluer, pas seulement pour fabriquer
+
+Utiliser le Test natif autocorrigé pour le formatif et le sommatif ; l'entraînement sans conséquence passe par un H5P intégré dans la section. La disponibilité d'un générateur ne choisit pas l'activité.
+
+- Privilégier de **nouveaux mini-scénarios de transfert**, plutôt que recopier la tâche ou la réponse de l'atelier.
+- Éviter la **réponse courte**, sauf si l'orthographe exacte est l'objet de l'évaluation ; ne pas exiger un libellé arbitraire pour vérifier une compréhension. Conserver les types existants et leurs sémantiques lors d'une reprise autorisée ; une modification d'épreuve doit être validée.
+- À la relecture, expliquer pour chaque distracteur pourquoi une personne pourrait le choisir. Retirer les réponses manifestement absurdes et les indices de longueur, de ton ou de formulation.
+- Rétroaction générale propre à chaque question, ou absente si celle des réponses suffit. Chaque retour aide à comprendre l'effet du choix ; éviter un même paragraphe générique copié partout.
+- Garder un nombre de choix cohérent dans une même série ; justifier une variation par la tâche. Ne pas ajouter un distracteur ridicule pour atteindre un nombre. Ne pas imposer quatre choix à tous les formats.
+
+**Exemple :** après l'atelier de comparaison de versions, présenter une situation nouvelle : « Une collègue a écrasé une valeur ; quelle première vérification faites-vous ? » avec des actions plausibles et un retour par réponse. **Contre-exemples :** reproduire exactement l'atelier ; demander de saisir un libellé au caractère près ; proposer « Le prix le plus élevé garantit la qualité ». Les données d'exercice ne justifient pas un bandeau « fictif » dans l'énoncé.
+
 ## 1. Décrire le test et ses questions
 
 Définir objectifs, couverture, notation et rétroaction avant de choisir les types. Pour chaque question, conserver dans le projet : clé, type et version du composant, énoncé, médias, réponses attendues, barème, rétroactions, indices et paramètres spécifiques. Pour une petite série, un tableau ou des fiches suffisent ; ne pas imposer une nouvelle banque canonique à un projet déjà structuré.

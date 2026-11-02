@@ -4,6 +4,12 @@ Pour fabriquer les paquets, lire [chaine-video-h5p.md](chaine-video-h5p.md). Pou
 
 Pour intégrer hors ligne des activités déjà présentes dans une sauvegarde, utiliser la [procédure de retouche H5P](retouches-activites.md), avec son profil et ses refus ; l'insertion dans l'éditeur ci-dessous reste la voie à tester dans le site.
 
+## Défaut de conception
+
+Pour un entraînement sans conséquence, afficher le H5P **dans la description de section**, avec activité source furtive si le site le permet. Exemple : question et retour sur la page de travail ; contre-exemple : ressource séparée imposant un aller-retour pour pratiquer. Choisir note et suivi selon le besoin, sans créer un enjeu évaluatif par défaut. Les évaluations formatives et sommatives privilégient le [test natif](tests-questions.md).
+
+La retouche d'une sauvegarde est un moyen déjà fourni ; son application reste explicite et limitée par son profil. L'intégration automatique dès la construction n'est pas annoncée par cette règle documentaire. Vérifier les capacités actuelles avant de promettre le résultat.
+
 ## Choisir l'objet source
 
 Un paquet `.h5p` est un fichier de contenu ; la banque de contenus est un lieu d'édition/stockage ; `h5pactivity` est une activité Moodle. Une intégration dans une Page ou une section est un mode de présentation. Choisir l'activité source et le mécanisme de suivi selon le besoin, au lieu d'inférer une note de la seule présence d'un H5P affiché.

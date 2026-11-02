@@ -1,44 +1,47 @@
 # Modèle de cours par défaut
 
-Utiliser ce modèle en phase 1 de la [démarche de cocréation](conception-cours.md). Il distingue un **socle par défaut** et un **parcours de sections adapté aux objectifs**. Le plan confirme le socle ou justifie chaque écart pour validation humaine ; il explique aussi les choix d'activités et leur mode réel de fabrication.
+Utiliser en phase 1 de la [démarche de cocréation](conception-cours.md). Le plan confirme le socle ou justifie chaque écart pour validation humaine. KISS : un seul endroit pour agir, peu de clics et de changements de page, sans ajouter de sous-niveaux de navigation. Lire [Concevoir une section](concevoir-section.md) pour la réalisation éditoriale.
 
 ## Socle par défaut
 
-| Élément par défaut | À préciser dans le plan et à vérifier |
+| Élément | À préciser et vérifier |
 |---|---|
-| Section d'accueil | Objectifs, parcours, durée indicative, préparation, aide et explication du suivi |
-| Achèvement expliqué avant chaque activité requise | Action attendue, condition qui déclenche la coche, retour et éventuelle attente ; état constatable après l'action |
-| Évaluation finale avec seuil de réussite | Forme adaptée à la compétence, seuil justifié, méthode de notation et de passage, retour et modalités de reprise explicites |
-| Attestation après réussite | Composant `customcert` disponible, modèle et restrictions configurés, accès refusé/autorisé et PDF à essayer |
+| Accueil | Objectifs, parcours, durée, préparation, aide et explication du suivi |
+| Achèvement expliqué avant chaque activité requise | Action, déclencheur de la coche, retour, attente éventuelle ; état constatable après l'action |
+| Évaluation finale avec seuil | Test natif autocorrigé par défaut ; seuil justifié, tentatives, relecture et règle de passage explicites |
+| Attestation après réussite | Reprendre le modèle de référence approuvé ; vérifier plugin, restrictions et PDF |
 | Rétroaction sur la formation | Feedback ou Questionnaire selon besoin et composants ; identification/anonymat, obligations et visibilité à décider |
 
-Décider explicitement si la rétroaction conditionne l'attestation. Une évaluation finale peut prendre la forme d'un test, d'un H5P ou d'une production évaluée si cela démontre les objectifs ; préciser alors comment le seuil est appliqué et vérifié. Éviter de supposer qu'un seuil H5P règle le passage Moodle, qu'une activité intégrée envoie automatiquement une note ou qu'une réussite émet seule un PDF.
+Décider si la rétroaction conditionne l'attestation. Un Devoir peut compléter l'évaluation d'une compétence pratique ; un remplacement du test final se justifie et se valide, sans convertir l'entraînement H5P en épreuve par facilité de fabrication. Un score H5P ne configure ni passage Moodle ni émission d'un PDF.
 
-Le nombre de sections, la durée, le seuil et les contenus appartiennent au projet. Ne pas imposer les valeurs d'un cours antérieur. Les sources, identifiants et médias réels ne sont pas des ressources à distribuer avec la skill.
+**Exemple :** accueil, pratique avec trace, test final avec seuil motivé, attestation et Feedback. **Contre-exemple :** supprimer test ou attestation faute de script. Nombre de sections, durée, seuil et données appartiennent au projet.
 
-## Proposer les contenus et activités des sections
+## Choisir les activités
 
-Relier objectif → ressource/démonstration → action → trace → rétroaction → achèvement. Un même objet peut couvrir plusieurs fonctions. **Aucune vidéo H5P n'est imposée dans chaque section.** Choisir la forme selon le contenu et le travail attendu, sans réduire les possibilités à H5P/Page/Fichier.
+Choisir selon l'apprentissage, puis déterminer le moyen dans [capacites.md](capacites.md). Le manque d'un générateur ne justifie pas de changer de véhicule pédagogique.
 
-| Besoin | Choix possible à justifier dans le plan |
-|---|---|
-| Comprendre une manipulation avec des retours pendant la démonstration | Vidéo H5P si les interactions servent les objectifs et si des médias adaptés existent ou peuvent être produits |
-| Réaliser et démontrer un travail | Devoir avec remise et correction, accompagné des ressources nécessaires |
-| Consulter une référence longue | Livre ou Pages pour structurer l'information et faciliter sa consultation |
-| S'entraîner avec notation spécialisée | Test natif et types exacts plutôt que conversion simplificatrice en H5P |
-| Contribuer ou discuter | Glossaire ou Forum, avec contribution et retour définis |
-| Composant absent du site | Proposer un moyen adapté ou annoncer l'impossibilité ; ne pas présenter une autre activité comme équivalente sans examen |
+| Besoin | À privilégier et quand | Exemple / contre-exemple |
+|---|---|---|
+| Jouer, s'exercer sans conséquence | **H5P intégré dans la description de section**, activité source furtive si nécessaire, sans enjeu de note | Anticipation et retour immédiat / entraînement H5P sur un écran séparé |
+| Évaluer en formatif ou sommatif | **Test natif autocorrigé**, tentatives, note, seuil et relecture adaptés | Mini-scénarios de transfert / Question Set retenu comme épreuve parce que son générateur existe |
+| Atelier, laboratoire, exercice pratique | **Devoir avec remise d'une trace**, corrigé ou non ; fichiers de départ joints à la consigne | Capture ou fichier remis / Page d'atelier cochée manuellement |
+| Lexique | **Glossaire** | Recherche par terme / longue Page de définitions |
+| Contenu à lire | **Description de section d'abord** ; Page pour une longue lecture ; Livre rarement, pour une longue référence à plusieurs chapitres | Trois étapes dans la section / Livre de six paragraphes répartis en chapitres |
+| Document à télécharger et utiliser | **Word ou PDF mis en forme**, jamais `.txt` sauf licence | Fiche à remplir / carnet brut `.txt` |
+| Leçon | **À éviter** : écrans et retours au cours multipliés | H5P intégré pour pratiquer sans enjeu / Leçon retenue car automatisée |
 
-Pour chaque activité ou ressource proposée, indiquer : objectif servi, choix et justification, action/trace attendue, suivi, prérequis et **mode de réalisation**. Distinguer ce que la skill fabrique, ce qui reste à créer manuellement dans Moodle et ce qui nécessiterait un développement ou un outil supplémentaire à vérifier. Un paquet H5P fabriqué n'est pas encore une activité Moodle créée, intégrée et suivie.
+Un autre besoin, par exemple discuter dans un Forum, reste à justifier par sa fonction. Une exception se présente au responsable avec son effet sur le parcours. La capacité technique Leçon reste disponible pour un besoin explicitement validé ; elle n'en fait pas le défaut de conception.
 
-Choisir un Livre ou un Devoir plutôt qu'une vidéo n'est pas un écart au socle. En revanche, proposer l'absence d'évaluation finale ou d'attestation modifie le socle : expliquer la raison, la solution et les effets, puis obtenir la validation. Une proposition n'est pas un choix déjà approuvé. Voir l'[exemple de plan](../assets/exemple-plan-cours.md).
+Dans le **plan du responsable**, indiquer objectif, justification, action/trace, retour, suivi, prérequis et réalisation : scripts éprouvés, interface Moodle ou développement restant. Un paquet H5P n'est pas une intégration suivie. Glossaire, pièces de consigne et extensions de pratique attendent encore leur validation technique ; cette documentation ne les annonce pas livrés.
 
 ## Visuel et suivi
 
-Le modèle ne prescrit pas l'apparence graphique de Bootstrap. La phase 3 établit une direction UX/visuelle puis une maquette par section. Chaque activité requise explique en amont l'action qui conduit à l'achèvement et permet d'en constater ensuite l'état, y compris l'attente ou le verrou lorsque pertinent. Une image de coche ne vaut pas preuve fonctionnelle.
+Reprendre par défaut direction visuelle **et attestation** du cours de référence approuvé. Sans référence, explorer la direction sur la section pilote. Produire une maquette par section ; Bootstrap sert la réalisation sans imposer son apparence.
 
-## Limites d'automatisation
+La section garde le contenu utile et des titres courts. L'action précède l'explication de la coche. Un Devoir à achèvement sur remise ne fait pas attendre une correction ; un Devoir à réussite exige un résultat suffisant. Une coche dessinée n'est pas une preuve fonctionnelle.
 
-Le modèle décrit le cours à produire, pas toutes les fonctions déjà générées par les scripts. Les activités sans générateur sont à créer manuellement dans Moodle dans l'état actuel des capacités, sauf moyen autorisé dont la disponibilité et la portée ont été établies ; voir [capacites.md](capacites.md). Si une capacité manque, annoncer le travail nécessaire avant de promettre sa réalisation.
+## Portée
 
-**Statut : documenté seulement.** L'acceptation du modèle est une décision de conception ; sa réalisation et ses essais sont propres à chaque cours.
+Le cours est un produit utilisable pour l'apprenant ; statuts et limites vont dans le projet du responsable. Utiliser une voie autorisée pour les activités sans générateur, faire valider les adaptations et vérifier les fonctions avant de les promettre.
+
+**Statut : documenté seulement.** La réalisation et les essais appartiennent à chaque cours. Voir l'[exemple de plan](../assets/exemple-plan-cours.md).

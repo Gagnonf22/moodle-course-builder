@@ -42,9 +42,13 @@ Le [parcours de cocréation](conception-cours.md) et le [modèle de base](modele
 
 Les tests et la reconstruction de 2b, la refonte documentaire, 3a, 3b, 3c et leurs correctifs ont été contre-validés indépendamment le 2026-11-01 (80 tests). M1 a ensuite éprouvé la portée ci-dessus en instance locale et corrigé l'en-tête XML et le contexte des images : 82 tests, contre-validation indépendante acquise. M2a ajoute Livre/Devoir, éprouvés dans la portée indiquée : 90 tests et contre-validation indépendante acquise. M2b ajoute banque/test natif : 103 tests et contre-validation indépendante acquise. M2c ajoute Feedback/Leçon/attestation native dans la portée indiquée : 114 tests réussis et contre-validation indépendante acquise. Les pièces restent dans le projet de développement, sans chargement ordinaire pour construire un cours. Une approbation hors ligne ne prouve pas l'usage Moodle.
 
+## Règles de conception et limites des moyens
+
+L'[outil de choix](modele-cours-de-base.md#choisir-les-activités) et [Concevoir une section](concevoir-section.md) guident le parcours, avec statut **documenté seulement, 2026-11-02**. Ils ne modifient pas les scripts. Choisir l'activité pour apprendre puis annoncer au responsable la voie réalisable. Glossaire, fichiers supplémentaires du Devoir, pratique sans correction et intégration H5P par défaut doivent encore être complétés ou éprouvés ; le contrôle automatique de l'expérience n'est pas encore fourni. La description riche et sa vérification doivent aussi être confirmées dans le contrat. Ne pas confondre recommandation éditoriale et capacité livrée.
+
 ## Choisir la réalisation
 
-Pour un cours neuf et le profil d'attestation simple, préférer la création native dans l'instance locale autorisée puis sa sauvegarde. La retouche `.mbz` reste utile sans instance ou pour reprendre un modèle couvert plus riche, dont image/signature ; ne pas le réduire silencieusement au profil natif. Les deux chemins ont leurs propres preuves et limites.
+Pour un cours neuf, reprendre d’abord le modèle d’attestation approuvé. Préférer la création native puis sa sauvegarde seulement si son profil conserve ce modèle ou si l’adaptation a été validée. La retouche `.mbz` reste utile sans instance ou pour reprendre un modèle couvert plus riche, dont image/signature ; ne pas le réduire silencieusement au profil natif. Les deux chemins ont leurs propres preuves et limites.
 
 1. Pour un plan, des textes ou des fichiers : travailler hors ligne ; isoler les conditions à vérifier à l'import.
 2. Pour une activité sans générateur : utiliser l'interface si elle est disponible et autorisée. Pour répéter en nombre, examiner les fonctions réellement exposées avant de proposer un développement.
