@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "fullname": "Parcours fictif de démonstration",
+  "shortname": "parcours-fictif",
+  "summary": "<p>Exemple de contrat de vérification, pas de génération complète.</p>",
+  "image_count": 0,
+  "sections": [
+    {
+      "name": "Validation et retour",
+      "activities": [
+        {"type": "h5p", "name": "Évaluation finale", "idnumber": "evaluation-finale", "completion": "pass", "package": "h5p/evaluation.h5p", "gradepass": 70, "course_required": true},
+        {"type": "customcert", "name": "Attestation", "idnumber": "attestation", "completion": "view", "condition": "evaluation-finale", "condition_state": 1, "course_required": false},
+        {"type": "feedback", "name": "Votre retour", "idnumber": "retour", "completion": "submit", "availability": null, "course_required": false}
+      ]
+    }
+  ]
+}

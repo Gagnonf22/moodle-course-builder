@@ -1,0 +1,21 @@
+{
+  "type": "QuestionSet",
+  "identifiant": "verification-synthetique",
+  "titre": "Vérifier une action",
+  "titre_activite": "Autoévaluation de démonstration",
+  "introduction": "Cet exemple fictif illustre une fiche du constructeur H5P.",
+  "seuil": 70,
+  "retro_globale": [[0, 69, "Reprenez le principe de vérification."], [70, 100, "Principe compris."]],
+  "questions": [
+    {
+      "type": "MultiChoice",
+      "cle": "verifier-resultat",
+      "titre": "Vérifier le résultat",
+      "question": "Après une modification, quelle action permet de vérifier son effet ?",
+      "reponses": [
+        {"texte": "Observer le résultat et le comparer au résultat attendu.", "correct": true, "retro": "La comparaison apporte une preuve sur le résultat."},
+        {"texte": "Supposer que le clic sur Enregistrer suffit.", "correct": false, "retro": "Une confirmation d'enregistrement ne vérifie pas tous les effets."}
+      ]
+    }
+  ]
+}

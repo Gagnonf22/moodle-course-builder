@@ -1,0 +1,164 @@
+{
+  "version": 3,
+  "fullname": "Exemple fictif de questions natives",
+  "shortname": "exemple-questions-natives",
+  "summary": "<p>Essai local fictif sans média.</p>",
+  "image_count": 0,
+  "sections": [
+    {
+      "name": "Vérifier",
+      "summary": "cours/accueil.html",
+      "activities": [
+        {
+          "type": "qbank",
+          "idnumber": "banque-exercices",
+          "name": "Banque des exercices",
+          "intro": "<p>Questions fictives communes.</p>",
+          "completion": "none",
+          "course_required": false,
+          "questions": [
+            {
+              "key": "choix-un",
+              "type": "multichoice",
+              "name": "Choisir un nombre pair",
+              "text": "<p>Quel nombre est pair ?</p>",
+              "mark": 1,
+              "single": true,
+              "answers": [
+                {
+                  "text": "4",
+                  "fraction": 1,
+                  "feedback": "Exact : divisible par deux."
+                },
+                {
+                  "text": "3",
+                  "fraction": 0,
+                  "feedback": "Trois est impair."
+                }
+              ],
+              "generalfeedback": "<p>Comparer la réponse à la règle présentée.</p>"
+            },
+            {
+              "key": "choix-plusieurs",
+              "type": "multichoice",
+              "name": "Choisir deux nombres pairs",
+              "text": "<p>Sélectionner les nombres pairs.</p>",
+              "mark": 2,
+              "single": false,
+              "answers": [
+                {
+                  "text": "2",
+                  "fraction": 0.5,
+                  "feedback": "Deux est pair."
+                },
+                {
+                  "text": "4",
+                  "fraction": 0.5,
+                  "feedback": "Quatre est pair."
+                },
+                {
+                  "text": "3",
+                  "fraction": -1,
+                  "feedback": "Trois est impair : pénalité explicite."
+                }
+              ],
+              "generalfeedback": "<p>Comparer la réponse à la règle présentée.</p>"
+            },
+            {
+              "key": "vrai-faux",
+              "type": "truefalse",
+              "name": "Propriété",
+              "text": "<p>Quatre est pair.</p>",
+              "mark": 1,
+              "correct": true,
+              "feedbacktrue": "Exact.",
+              "feedbackfalse": "Revoir la divisibilité par deux.",
+              "generalfeedback": "<p>Comparer la réponse à la règle présentée.</p>"
+            },
+            {
+              "key": "courte",
+              "type": "shortanswer",
+              "name": "Nommer la couleur",
+              "text": "<p>Écrire bleu.</p>",
+              "mark": 1,
+              "usecase": false,
+              "answers": [
+                {
+                  "text": "bleu",
+                  "fraction": 1,
+                  "feedback": "Exact, casse indifférente."
+                },
+                {
+                  "text": "*",
+                  "fraction": 0,
+                  "feedback": "Écrire le mot demandé."
+                }
+              ],
+              "generalfeedback": "<p>Comparer la réponse à la règle présentée.</p>"
+            },
+            {
+              "key": "numerique",
+              "type": "numerical",
+              "name": "Mesure tolérée",
+              "text": "<p>Donner 10 avec une tolérance absolue de 0,5.</p>",
+              "mark": 2,
+              "answers": [
+                {
+                  "text": "10",
+                  "fraction": 1,
+                  "tolerance": 0.5,
+                  "feedback": "Valeur dans la tolérance absolue."
+                }
+              ],
+              "generalfeedback": "<p>Comparer la réponse à la règle présentée.</p>"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "idnumber": "test-final",
+          "name": "Vérification finale",
+          "intro": "<p>Deux tentatives ; 75/100 pour réussir.</p>",
+          "completion": "pass",
+          "grade": 100,
+          "gradepass": 75,
+          "attempts": 2,
+          "grademethod": "highest",
+          "bank": "banque-exercices",
+          "questions": [
+            "choix-un",
+            "choix-plusieurs",
+            "vrai-faux",
+            "courte",
+            "numerique"
+          ],
+          "review": {
+            "during": {
+              "attempt": true,
+              "maxmarks": true
+            },
+            "immediately": {
+              "attempt": true,
+              "correctness": true,
+              "marks": true,
+              "maxmarks": true,
+              "specificfeedback": true,
+              "generalfeedback": true
+            },
+            "open": {
+              "attempt": true,
+              "marks": true,
+              "maxmarks": true
+            },
+            "closed": {
+              "attempt": true,
+              "marks": true,
+              "rightanswer": true,
+              "generalfeedback": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

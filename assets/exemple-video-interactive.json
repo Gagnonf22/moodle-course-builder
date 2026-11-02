@@ -1,0 +1,49 @@
+{
+  "type": "InteractiveVideo",
+  "identifiant": "demonstration-fictive",
+  "titre": "Observer et vérifier une action",
+  "titre_activite": "Démonstration interactive synthétique",
+  "description": "Exemple fictif de fiche : les médias indiqués sont à fournir dans le projet.",
+  "video": "medias/demonstration-fictive.mp4",
+  "sous_titres": "medias/demonstration-fictive.fr.vtt",
+  "affiche_temps": 2,
+  "signets": [
+    [0, "Se préparer"],
+    [45, "Vérifier l'action"],
+    [85, "Constater le résultat"]
+  ],
+  "fin": 120,
+  "fin_libelle": "Fin de la démonstration fictive",
+  "interactions": [
+    {
+      "type": "MultiChoice",
+      "cle": "preparer-verification",
+      "titre": "Préparer la vérification",
+      "temps": 20,
+      "question": "Avant la manipulation fictive, que faut-il définir ?",
+      "reponses": [
+        {"texte": "Le résultat attendu et la manière de l'observer.", "correct": true, "retro": "Cela permettra de comparer le résultat obtenu à celui attendu."},
+        {"texte": "Seulement la couleur du bouton à utiliser.", "correct": false, "retro": "L'apparence du bouton ne suffit pas à définir le résultat attendu."}
+      ]
+    },
+    {
+      "type": "TrueFalse",
+      "cle": "action-et-resultat",
+      "titre": "Distinguer action et résultat",
+      "temps": 55,
+      "question": "Cliquer sur Enregistrer suffit toujours à prouver que le résultat attendu est obtenu.",
+      "correct": false,
+      "retro_bonne": "Il faut aussi observer le résultat utile à la tâche.",
+      "retro_mauvaise": "Une action enregistrée n'est pas à elle seule une vérification du résultat."
+    },
+    {
+      "type": "DragText",
+      "cle": "completer-demarche",
+      "titre": "Compléter la démarche",
+      "temps": 95,
+      "consigne": "Placez le mot qui complète la démarche de vérification.",
+      "texte": "Après la manipulation, il faut *comparer* le résultat obtenu au résultat attendu.",
+      "distracteurs": "ignorer"
+    }
+  ]
+}

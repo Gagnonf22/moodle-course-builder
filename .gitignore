@@ -1,0 +1,15 @@
+# Contenus et sorties de projets : à conserver hors de la skill.
+*.mbz
+*.h5p
+.env
+.env.*
+*.log
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+tmp/
+temp/
+outputs/
+dist/
+*.tmp
