@@ -1,6 +1,6 @@
 import io, json, subprocess, sys, tarfile, tempfile, unittest
 from pathlib import Path
-SCRIPT=Path(__file__).resolve().parents[1]/'scripts'/'inspect_mbz.py'
+SCRIPT=Path(__file__).resolve().parents[1]/'scripts'/'inspecter_mbz.py'
 
 def archive(path, entries):
     with tarfile.open(path,'w') as t:
@@ -21,9 +21,9 @@ class InspectorTests(unittest.TestCase):
     def test_module_count_and_course_format(self):
         r=self.run_case([('course/course.xml','<course><format>topics</format></course>','file'),('activities/page_1/module.xml','<module/>','file'),('activities/url_2/module.xml','<module/>','file')]);self.assertEqual(r.returncode,0,r.stderr);j=json.loads(r.stdout);self.assertEqual(j['module_count'],2);self.assertEqual(j['module_types'],{'page':1,'url':1});self.assertEqual(j['course_format'],'topics')
     def test_not_tar(self):
-        r=self.run_case(raw=b'fake backup');self.assertNotEqual(r.returncode,0);self.assertIn('not TAR',r.stderr)
+        r=self.run_case(raw=b'fake backup');self.assertNotEqual(r.returncode,0);self.assertIn('format TAR attendu',r.stderr)
     def test_traversal(self):
-        r=self.run_case([('../outside','x','file')]);self.assertNotEqual(r.returncode,0);self.assertIn('Unsafe',r.stderr)
+        r=self.run_case([('../outside','x','file')]);self.assertNotEqual(r.returncode,0);self.assertIn('non sûr',r.stderr)
     def test_absolute(self):
         r=self.run_case([('/etc/passwd','x','file')]);self.assertNotEqual(r.returncode,0)
     def test_symlink(self):
@@ -31,7 +31,7 @@ class InspectorTests(unittest.TestCase):
     def test_hardlink(self):
         r=self.run_case([('activities/link','', 'hard')]);self.assertNotEqual(r.returncode,0)
     def test_course_xml_over_limit(self):
-        r=self.run_case([('course/course.xml','a'*(2*1024*1024+1),'file')]);self.assertNotEqual(r.returncode,0);self.assertIn('metadata too large',r.stderr)
+        r=self.run_case([('course/course.xml','a'*(2*1024*1024+1),'file')]);self.assertNotEqual(r.returncode,0);self.assertIn('trop volumineuses',r.stderr)
     def test_dot_prefix_normalized_and_aliases_refused(self):
         r=self.run_case([('./course/course.xml','<course><format>topics</format></course>','file'),('./activities/page_1/module.xml','<module/>','file')])
         self.assertEqual(r.returncode,0,r.stderr)
@@ -39,5 +39,5 @@ class InspectorTests(unittest.TestCase):
         self.assertEqual(json.loads(r.stdout)['course_format'],'topics')
         r=self.run_case([('./course/course.xml','<course/>','file'),('course/course.xml','<course/>','file')])
         self.assertNotEqual(r.returncode,0)
-        self.assertIn('Ambiguous',r.stderr)
+        self.assertIn('ambigu',r.stderr)
 if __name__=='__main__':unittest.main()

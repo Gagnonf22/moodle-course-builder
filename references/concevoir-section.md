@@ -2,6 +2,14 @@
 
 Lire en phase 1 pour organiser le parcours, puis pendant les brouillons, maquettes et relectures. Appliquer l'[outil de choix](modele-cours-de-base.md#choisir-les-activités) avant de choisir les moyens de fabrication.
 
+## Accueil, identité et noms propres au produit
+
+La **section 0 présente le cours** : bandeau, objectifs d'ensemble, déroulement, durée et conditions de l'attestation. Elle ne commence pas directement par le premier module. Exemple : « Bien démarrer » avec le parcours et la réussite attendue ; contre-exemple : « M00 — Se préparer » sans présentation.
+
+Garder une **structure reconnaissable**, avec une intention et des repères propres au contenu de chaque section : illustration ou icône utile, points « À retenir », disposition adaptée. Exemple : étapes illustrées pour une manipulation, comparaison pour une décision ; contre-exemple : onze encadrés identiques dont seule une ligne change. Ne pas inventer un design différent à chaque section ni ajouter des ornements sans fonction.
+
+Le **nom complet et le nom abrégé du cours** sont lisibles et prêts pour l'apprenant : aucun code d'essai, date de chantier ou numéro de version. Ils apparaissent aussi dans le fil d'Ariane et le titre de l'onglet. Les versions restent dans le projet. Exemple : « Réaliser une tâche numérique » ; contre-exemple : « ESSAI-NUIT-20261102 — v2 ».
+
 ## Une page principale, une prochaine action
 
 La **description de section est la page principale** : bandeau (titre, intention, durée indicative), objectifs, points « À retenir », consignes courtes, H5P et vidéos utiles intégrés. Avant chaque activité requise, préciser l'action, le déclencheur de la coche et le retour reçu. Distinguer remise, correction différée et réussite.
@@ -16,6 +24,7 @@ KISS : un seul endroit pour agir, peu de clics, d'onglets et de changements de p
 
 - Titres visibles courts, distincts et orientés vers l'action : « Retrouver une version », pas « M03-GUIDE — Atelier — Retrouver une version ». Les clés restent dans le projet et `idnumber`.
 - Description et action propres à chaque étape : « Comparez les versions et indiquez la différence », pas « Votre action : réalisez cette étape ». Conserver les libellés fonctionnels communs qui facilitent le repérage, supprimer le remplissage répété.
+- Garder les consignes et informations essentielles visibles ; réserver les dépliants aux compléments facultatifs. Une page ne doit pas paraître vide avant ouverture de cinq dépliants.
 - Aucun dépliant, onglet ou bouton vide. Un média absent ne laisse ni cadre vide ni invitation à le lire. Faire décider une solution utile dans le projet, puis présenter seulement le parcours utilisable.
 - Une mise en garde utile au bon endroit suffit ; ne pas répéter partout le même avertissement. Ajouter une aide locale si le risque change réellement.
 - Supprimer titres dupliqués, ponctuation fautive et promesses de navigation non vérifiées. Lecture dans la section d'abord ; document à utiliser en Word ou PDF mis en forme, jamais en `.txt`, sauf licence.
@@ -34,7 +43,7 @@ Les **fichiers de projet du responsable** (`LIRE-AVANT-IMPORT.md`, `DECISIONS.md
 
 Examiner d'abord les médias existants, dont les vidéos en ligne : intégration dans la section en priorité, ressource URL si nécessaire, ou vidéo interactive H5P avec source en ligne si l'éditeur et le fournisseur la prennent en charge. Vérifier accès apprenant, sous-titres, droits, authentification et dépendance externe. Le constructeur de paquets actuel exige des médias locaux ; ne pas lui annoncer une entrée URL non gérée. Voir [la chaîne vidéo](chaine-video-h5p.md).
 
-Prévoir des **captures annotées** pour les manipulations : étape, zone à repérer, action, résultat attendu, sans donnée personnelle inutile. Décrire l'action dans le texte aussi.
+Fournir **au moins une capture annotée pour chaque manipulation d’interface** : étape, zone à repérer, action, résultat attendu, sans donnée personnelle inutile. Décrire l'action dans le texte aussi.
 
 **Exemple :** vidéo disponible intégrée et capture de la commande encadrée et décrite. **Contre-exemple :** demander systématiquement une nouvelle vidéo ou laisser un dépliant vidéo sans média.
 

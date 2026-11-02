@@ -26,7 +26,7 @@ Une entrée de fichier sans blob peut être une référence vers la banque de co
 L'aperçu rapide inclus est limité :
 
 ```text
-python scripts/inspect_mbz.py entree.mbz
+python scripts/inspecter_mbz.py entree.mbz
 ```
 
 Il accepte TAR lisible par Python et produit des compteurs, sans extraction. Les préfixes `./` sont normalisés et les alias ambigus refusés ; il ne traite pas toutes les structures de métadonnées et ne remplace pas les rapprochements ci-dessus. Il peut sous-compter d'autres structures et omettre le format réel ; un résultat vide ou `null` ne prouve pas leur absence. L'option `--output` exige une sortie neuve. L'ancien inventaire détaillé et l'ancien empaqueteur ne sont pas livrés dans cette distribution, en raison de défauts connus non corrigés.

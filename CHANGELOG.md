@@ -1,5 +1,11 @@
 # Historique
 
+## Non publié — 2026-11-02 — Correction U1 et nom français
+
+- Nouveau nom `concepteur-cours-moodle` (ancien nom : `moodle-course-builder`) et inspecteur `inspecter_mbz.py`, avec test et appels alignés ; messages de l’inspecteur en français. Aucun changement de capacité ; espace UUID historique conservé à valeur identique.
+- Tableau obligatoire à cinq colonnes, validation avant construction et changement d’outil soumis au responsable ; exemple par activité/ressource. Accueil, captures, repères de section et noms de cours renforcés.
+- Tests natifs aux jalons justifiés et visite automatisée locale proposée en phase 4b. Exclusion de la navigation des répétitions, contrôle séparé des titres prévu pour U3.
+
 ## Non publié — 2026-11-02 — U1, conception de l'expérience
 
 - Description de section comme page principale, KISS, titres d'action, contenu propre à chaque étape et absence de composants vides.

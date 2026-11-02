@@ -112,6 +112,10 @@ class StableH5pTests(unittest.TestCase):
         self.assertIn('1 interaction(s) sans cle', first[3])
         self.assertEqual(uuid.UUID(a[0]).version, 4)
 
+    def test_renommage_conserve_uuid_historique(self):
+        self.assertEqual(build.identifiant_interaction({'cle': 'one'}, 'package-a'),
+                         'fd1f6b17-4af4-57eb-ae73-d3997856ebdb')
+
     def test_new_fiche_identifier_or_new_key_changes_uuid(self):
         first = build.identifiant_interaction({'cle': 'one'}, 'package-a')
         self.assertNotEqual(first, build.identifiant_interaction({'cle': 'one'}, 'package-b'))

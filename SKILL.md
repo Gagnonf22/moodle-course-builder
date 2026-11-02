@@ -1,5 +1,5 @@
 ---
-name: moodle-course-builder
+name: concepteur-cours-moodle
 description: Créer un cours Moodle, le concevoir, le réviser ou examiner une sauvegarde .mbz. Utiliser pour préparer le parcours et les maquettes, une vidéo interactive H5P, un test, un devoir, une attestation ou la rétroaction ; choisir les activités, configurer le suivi et vérifier une restauration. Fournit des procédures et des outils dont la portée de fabrication est précisée par capacité.
 ---
 
@@ -8,6 +8,8 @@ description: Créer un cours Moodle, le concevoir, le réviser ou examiner une s
 Transformer le besoin en un cours modifiable et vérifiable. Adapter la forme aux objectifs et au public : une vidéo interactive, un devoir, un Livre et un test natif répondent à des besoins différents.
 
 Pour créer un cours, appliquer la [démarche de cocréation](references/conception-cours.md) et le [modèle de base](references/modele-cours-de-base.md) : socle commun, activités de sections adaptées aux objectifs. La personne responsable valide chaque phase ; le plan justifie les choix et écarts au socle et distingue fabrication par la skill et création manuelle dans Moodle. Une petite modification reprend seulement les phases pertinentes. Valider l’expérience utilisateur à chaque phase ; reprendre par défaut la direction et l’attestation du cours de référence approuvé. Concevoir l’UX avant de choisir sa réalisation dans le thème.
+
+La construction attend la validation du tableau obligatoire de phase 1, une ligne par activité ou ressource. Tout changement d’outil ultérieur revient à la personne responsable avant exécution ; voir [la démarche](references/conception-cours.md).
 
 ## Commencer
 

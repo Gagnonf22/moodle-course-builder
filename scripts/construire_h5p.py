@@ -15,7 +15,8 @@ from encoder_videos import trouver_ffmpeg
 from fichiers import chemin_projet, publier_nouveau
 TITRES_LIB = {"MultiChoice": "Multiple Choice", "TrueFalse": "True/False Question", "DragText": "Drag the Words"}
 TYPES_LIB = {"MultiChoice": "Choix multiples", "TrueFalse": "Vrai ou faux", "DragText": "Glisser les mots"}
-ESPACE_INTERACTIONS = uuid.uuid5(uuid.NAMESPACE_URL, 'urn:moodle-course-builder:h5p:interaction:v1')
+# Valeur historique conservée : le renommage ne change pas les UUID à clé.
+ESPACE_INTERACTIONS = uuid.UUID('e5cf8f82-2251-5609-af5e-a3a938c28a35')
 
 
 def langue_sous_titres(fiche, langue_defaut='fr', libelle_defaut=None):
@@ -98,7 +99,7 @@ def valider_fiche(fiche):
         if 'cle' in q:
             cle = q['cle']
             if not isinstance(cle, str) or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]*', cle):
-                raise ValueError('Clé d’interaction invalide : lettres, chiffres, tirets ou underscores attendus')
+                raise ValueError('Clé d’interaction invalide : lettres, chiffres, tirets ou traits de soulignement attendus')
             if cle in cles:
                 raise ValueError('Clé d’interaction dupliquée dans la fiche')
             cles.add(cle)
@@ -395,7 +396,7 @@ def main():
     p.add_argument('--projet', required=True, help='Racine explicite des chemins des médias dans les fiches')
     p.add_argument("--sortie", required=True)
     p.add_argument('--limite-mio', type=float, help='Taille maximale facultative ; refus au-delà, pas de changement de qualité silencieux')
-    p.add_argument('--affiches', help='Dossier facultatif de posters existants nommés <identifiant>-affiche.jpg')
+    p.add_argument('--affiches', help='Dossier facultatif d’affiches existantes nommés <identifiant>-affiche.jpg')
     p.add_argument('--langue-sous-titres', default='fr', help='Code de langue de repli des vidéos (fr par défaut)')
     p.add_argument('--libelle-sous-titres', help='Libellé de repli ; la fiche est prioritaire')
     p.add_argument("--ffmpeg", default=os.environ.get("FFMPEG_EXE") or shutil.which("ffmpeg"))

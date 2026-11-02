@@ -1,4 +1,4 @@
-# Moodle Course Builder — 0.7.0
+# Concepteur de cours Moodle — 0.7.0
 
 Une skill en français pour les conseillers pédagogiques et les enseignants qui souhaitent concevoir, construire et vérifier des cours Moodle avec une IA. Elle réunit une démarche de cocréation, des procédures à consulter selon la tâche, des exemples fictifs et des outils de fabrication. Elle n'est ni un plugin Moodle ni un constructeur universel.
 
@@ -45,20 +45,20 @@ Les scripts PHP sont des outils de validation locale avec privilèges : lire [le
 
 ## Installation dans un agent local
 
-Copier **tout le dossier**, en le nommant `moodle-course-builder`, dans le dossier de skills de l'agent ; `SKILL.md` doit être directement à sa racine. Ne pas copier seulement ce fichier et ne pas ajouter un niveau de dossier supplémentaire.
+Copier **tout le dossier**, en le nommant `concepteur-cours-moodle`, dans le dossier de skills de l'agent ; `SKILL.md` doit être directement à sa racine. Ne pas copier seulement ce fichier et ne pas ajouter un niveau de dossier supplémentaire.
 
 | Agent | Emplacement personnel de la copie |
 |---|---|
-| Codex | `~/.agents/skills/moodle-course-builder/` |
-| Claude Code | `~/.claude/skills/moodle-course-builder/` |
+| Codex | `~/.agents/skills/concepteur-cours-moodle/` |
+| Claude Code | `~/.claude/skills/concepteur-cours-moodle/` |
 
 `~` représente le dossier personnel. Les installations limitées à un projet utilisent respectivement `.agents/skills/` et `.claude/skills/` dans ce projet. Vérifier les emplacements pris en charge par sa version dans les documentations officielles [Codex](https://developers.openai.com/codex/skills/) et [Claude Code](https://code.claude.com/docs/en/skills).
 
-Ouvrir une nouvelle session et demander explicitement à l'agent d'utiliser `moodle-course-builder`, puis vérifier qu'il lit la démarche et les capacités pertinentes. La détection automatique dépend de l'agent et n'est pas garantie par les tests des scripts. L'installation dans un agent hébergé peut utiliser un autre mécanisme.
+Ouvrir une nouvelle session et demander explicitement à l'agent d'utiliser `concepteur-cours-moodle`, puis vérifier qu'il lit la démarche et les capacités pertinentes. La détection automatique dépend de l'agent et n'est pas garantie par les tests des scripts. L'installation dans un agent hébergé peut utiliser un autre mécanisme.
 
 ## Première utilisation et tests
 
-Exemple de demande : « Utilise moodle-course-builder pour proposer le plan d'un cours de 45 minutes. Justifie les activités et distingue ce que tu peux fabriquer des créations manuelles. Attends ma validation avant le brouillon. »
+Exemple de demande : « Utilise concepteur-cours-moodle pour proposer le plan d'un cours de 45 minutes. Justifie les activités et distingue ce que tu peux fabriquer des créations manuelles. Attends ma validation avant le brouillon. »
 
 Conserver les contenus, médias, décisions et sorties dans un **dossier de projet distinct**. Les exemples dans `assets/` sont fictifs ; les médias référencés doivent être fournis par le projet. Commencer par la référence utile dans [SKILL.md](SKILL.md), sans charger toute la documentation.
 
@@ -68,7 +68,7 @@ Depuis la racine de la skill, exécuter les tests sans créer de cache :
 python -B -m unittest discover -s tests -q
 ```
 
-Configurer `FFMPEG_EXE` et `PHP_BIN` si les exécutables ne sont pas disponibles par leur nom. La suite comporte **114 tests** ; les tests dépendants d'outils absents peuvent être ignorés et doivent être signalés comme tels. Ce résultat hors ligne ne remplace pas l'essai d'un vrai parcours étudiant dans l'instance cible.
+Configurer `FFMPEG_EXE` et `PHP_BIN` si les exécutables ne sont pas disponibles par leur nom. La suite comporte **115 tests** ; les tests dépendants d'outils absents peuvent être ignorés et doivent être signalés comme tels. Ce résultat hors ligne ne remplace pas l'essai d'un vrai parcours étudiant dans l'instance cible.
 
 ## Limites et diffusion
 

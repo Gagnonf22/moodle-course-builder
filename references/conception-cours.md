@@ -16,15 +16,27 @@ Créer ou reprendre un **dossier de projet propre au cours**, hors de la skill :
 
 Pour le contenu des sections, appliquer l’[outil de choix des activités](modele-cours-de-base.md#choisir-les-activités) et [Concevoir une section](concevoir-section.md) : description de section d’abord, entraînement H5P intégré, évaluation par test natif, pratique avec Devoir et trace, lexique en Glossaire ; éviter la Leçon et les sous-niveaux. Justifier chaque choix par l'apprentissage visé, pas par la seule présence d'un générateur. Pour chaque élément, indiquer ce que la skill fabrique réellement et ce qui doit être créé manuellement dans Moodle ; signaler les prérequis ou développements manquants. Distinguer notamment fabrication d'un paquet H5P et création/configuration de son activité Moodle. Choisir une forme autre qu'une vidéo n'est pas un écart au socle.
 
+### Tableau obligatoire avant construction
+
+Livrable de phase 1 : **une ligne par activité ou ressource**, identifiée dans la première colonne ; distinguer les objets au lieu de regrouper test, attestation et rétroaction sur une seule ligne.
+
+| Type Moodle exact (élément identifié) | Pourquoi cet outil : objectif et règle de choix | Alternative écartée et raison | Condition d'achèvement | Fabriqué par la skill ou à créer à la main |
+|---|---|---|---|---|
+| `assign` — Réaliser et vérifier | Pratiquer et remettre une trace | Page à coche manuelle : aucune remise réelle | À la remise, sans correction obligatoire | Profil noté fourni ; pratique et pièces jointes à compléter/éprouver, sinon création manuelle |
+
+**La construction ne commence qu'après validation de ce tableau par la personne responsable.** Consigner l'approbation avec sa portée dans le projet. Le brouillon et les maquettes suivent leurs validations propres ; un choix d'activité ne vaut pas autorisation de déploiement.
+
+**Tout changement d'outil ultérieur, même pendant la construction, lui revient avant exécution** : présenter la raison, l'alternative, les effets sur l'achèvement et le mode de fabrication, mettre à jour la ligne concernée et attendre sa décision. Une incapacité du script n'autorise pas un remplacement. Voir le [tableau rempli](../assets/exemple-plan-cours.md).
+
 Choisir une **section pilote** représentative d’une difficulté réelle. Reprendre **par défaut la direction visuelle et le modèle d’attestation du cours de référence approuvé** ; sans référence, prévoir l’exploration d’une direction nouvelle. Ne pas remplacer le modèle approuvé par un profil plus simple sans validation. Préciser les inconnues techniques ; ne pas bloquer la conception hors ligne faute d'accès au site.
 
 **Contrôle UX :** KISS et peu d’écrans ; activités choisies pour apprendre ; titres compréhensibles ; séparation apprenant/responsable ; contenu spécifique à chaque étape. Exemple : un Devoir regroupe consigne et trace ; contre-exemple : trois activités pour un même atelier.
 
-**À valider :** socle confirmé ou écarts justifiés, choix du parcours et leur justification, répartition fabrication/manipulations manuelles, section pilote, modalités de suivi et contraintes ouvertes. Voir l'[exemple synthétique](../assets/exemple-plan-cours.md).
+**À valider :** tableau obligatoire par activité/ressource, socle confirmé ou écarts justifiés, choix du parcours et leur justification, répartition fabrication/manipulations manuelles, section pilote, modalités de suivi et contraintes ouvertes. Voir l'[exemple synthétique](../assets/exemple-plan-cours.md).
 
 ## 2. Brouillon
 
-Rédiger complètement la section pilote : contenu, consignes, questions, réponses/rétroactions, action attendue et conditions d'achèvement. Examiner d’abord les vidéos existantes, y compris en ligne, et prévoir des captures annotées pour les manipulations ; une intégration ou URL peut convenir sans nouveau média. Vérifier droits et accès, signaler au responsable les limites du constructeur. Pour une vidéo à produire, préparer le scénario ou découpage. Les cas d’exercice sont réalistes ; aucune mention de chantier ni bandeau « fictif » dans le contenu apprenant.
+Rédiger complètement la section pilote : contenu, consignes, questions, réponses/rétroactions, action attendue et conditions d'achèvement. Examiner d’abord les vidéos existantes, y compris en ligne, et fournir au moins une capture annotée pour chaque manipulation d’interface ; une intégration ou URL peut convenir sans nouveau média. Vérifier droits et accès, signaler au responsable les limites du constructeur. Pour une vidéo à produire, préparer le scénario ou découpage. Les cas d’exercice sont réalistes ; aucune mention de chantier ni bandeau « fictif » dans le contenu apprenant.
 
 Valider le fond de cette section avant de décliner les autres brouillons. Conserver les sources faciles à modifier ; ne pas fabriquer tous les médias définitifs avant validation. Une seule section pilote sera reprise en phase 3, sans créer un second prototype de contenu.
 
@@ -65,6 +77,8 @@ Configurer notes, passage, achèvement, accès et dépendances séparément. Con
 Dans un cours de test masqué autorisé, restaurer si pertinent et essayer **tout le parcours**, pas seulement la section pilote : réussite et échec avec rôle apprenant, fichiers/liens, notes, achèvement, restrictions, attestation et rétroaction, clavier et mobile. Ajouter l'état d'attente lorsqu'une correction humaine intervient.
 
 Comparer les résultats aux critères du plan ; corriger et reprendre les contrôles touchés. Si l'environnement manque, la phase reste incomplète et ses fonctions non testées sont annoncées ; aucune réussite n'est supposée à partir du HTML ou du XML.
+
+Quand l'environnement le permet, **proposer**, sans l'imposer, une visite automatisée dans le Moodle local : compte apprenant de test, vues écran et téléphone, parcours scripté des sections/activités, captures et relevé du texte de contenu. Examiner accueil, repérage, dépliants et actions, état de la coche et affichage du nom du cours. Ne pas inclure de paramètres de session dans les traces. Le navigateur ou ses outils peuvent être indisponibles : consigner alors les limites et proposer une visite manuelle, sans contourner les restrictions. Les captures du responsable dans le site cible restent la validation finale du rendu ; toute visite d'un site réel exige son autorisation explicite.
 
 **Contrôle UX :** sous rôle apprenant, compter les changements de page utiles, vérifier adéquation des activités et repérage par les titres, absence de notes au responsable et de phrases génériques. Exemple : une trace remise donne l’état configuré ; contre-exemple : une Page cochée censée prouver une remise. Conserver les limites d’essai dans le projet.
 

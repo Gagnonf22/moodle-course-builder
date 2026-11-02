@@ -14,6 +14,8 @@ Utiliser le Test natif autocorrigé pour le formatif et le sommatif ; l'entraîn
 
 **Exemple :** après l'atelier de comparaison de versions, présenter une situation nouvelle : « Une collègue a écrasé une valeur ; quelle première vérification faites-vous ? » avec des actions plausibles et un retour par réponse. **Contre-exemples :** reproduire exactement l'atelier ; demander de saisir un libellé au caractère près ; proposer « Le prix le plus élevé garantit la qualité ». Les données d'exercice ne justifient pas un bandeau « fictif » dans l'énoncé.
 
+Voir aussi [combien de tests prévoir](modele-cours-de-base.md#nombre-de-tests) : test final par défaut, jalons supplémentaires motivés dans le tableau validé, pas de test systématique par module.
+
 ## 1. Décrire le test et ses questions
 
 Définir objectifs, couverture, notation et rétroaction avant de choisir les types. Pour chaque question, conserver dans le projet : clé, type et version du composant, énoncé, médias, réponses attendues, barème, rétroactions, indices et paramètres spécifiques. Pour une petite série, un tableau ou des fiches suffisent ; ne pas imposer une nouvelle banque canonique à un projet déjà structuré.

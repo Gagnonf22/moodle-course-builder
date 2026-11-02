@@ -8,6 +8,8 @@ Lire pour préparer les essais d'un livrable ou diagnostiquer un écart. Choisir
 
 Un contrôle automatique de signalements est prévu mais non livré à ce stade. Il ne remplacera ni la relecture ni l'essai. Les réserves techniques, captures d'essai et statuts vont dans les fichiers du responsable ; ils ne s'affichent pas dans le cours. Les liens suivent la [convention documentée](concevoir-section.md#liens-et-changements-donglet), distincte d'une obligation WCAG.
 
+Pour le futur contrôle automatique, **séparer les champs analysés** : contenu des sections et activités pour les répétitions, en excluant menus et navigation ; noms complets/abrégés du cours et titres d'activités contrôlés à part. Exemple : un titre répété dans le menu n'est pas une répétition rédactionnelle ; un code de chantier dans le nom abrégé reste un signalement. Cette exigence d'étalonnage est prévue pour U3, pas implémentée ici.
+
 ## Avant l'instance
 
 Contrôler les fichiers et liens, formats attendus, intégrité des médias, dépendances et paramètres fonctionnels. Relire les questions et sous-titres sur le fond. Les scripts de la chaîne ont des tests locaux ; leur succès ne remplace ni la relecture pédagogique ni un essai Moodle.
