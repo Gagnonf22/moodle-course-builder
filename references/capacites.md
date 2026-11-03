@@ -8,7 +8,7 @@ Consulter cette page pour choisir un outil ou annoncer la portée d'une livraiso
 - **Vérifié en instance** : préciser date, environnement et fonction réellement observée. Un succès rapporté par l'utilisateur reste signalé comme tel ; il ne valide pas un autre générateur.
 - **Documenté seulement** : procédure ou modèle décrit, éventuellement observé dans une sauvegarde, mais pas exécuté dans le contexte cible. Préciser si l'automatisation reste à développer.
 
-Les statuts ci-dessous sont datés du **2026-11-01**. Réviser la date et la portée lorsqu'une nouvelle preuve change le statut. Une documentation n'a pas besoin d'être rebaptisée « inconnue » parce qu'un générateur n'existe pas.
+Les statuts historiques ci-dessous sont datés du **2026-11-01** ; les ajouts U2 sont datés du **2026-11-03**. Réviser la date et la portée lorsqu'une nouvelle preuve change le statut. Une documentation n'a pas besoin d'être rebaptisée « inconnue » parce qu'un générateur n'existe pas.
 
 ## Ce que la version 0.7.0 fournit
 
@@ -24,7 +24,7 @@ Le [parcours de cocréation](conception-cours.md) et le [modèle de base](modele
 | Extraire, remplacer, réemballer : `scripts/mbz_archive.py` | TAR/gzip, sortie neuve, temporaire court | Construit et vérifié hors ligne | Contrôles de format et conservation ; extraction/réemballage employés par la chaîne restaurée en M1, sans garantie de transformation métier universelle |
 | Aperçu : `scripts/inspecter_mbz.py` | Archive TAR, lecture autorisée | Construit et vérifié hors ligne | Tests synthétiques ; limites de parcours et métadonnées dans [sauvegardes.md](sauvegardes.md) |
 | Refuser une base distante ou absente, ajout 3a | `--validation-locale`, `wwwroot` local, `dbhost` local explicite et socket conforme | Construit et vérifié hors ligne par doublure PHP seulement | Refus avant élévation/construction ; après bootstrap de `config.php`. Ni connexion réelle ni isolation complète démontrées |
-| Créer un cours : `scripts/moodle/construire_cours.php` | Instance/base locales isolées et autorisées, état de secours, contrat v1 à v4 | Vérifié en instance : Moodle 5.1.8+ local, 2026-11-01 | H5P/Page/Fichier éprouvés en M1 ; Livre/Devoir, banque/test et profils v4 ci-dessous. Cours neuf masqué, collision refusée |
+| Créer un cours : `scripts/moodle/construire_cours.php` | Instance/base locales isolées et autorisées, état de secours, contrat v1 à v5 | Vérifié en instance : Moodle 5.1.8+ local, 2026-11-01 | H5P/Page/Fichier éprouvés en M1 ; Livre/Devoir, banque/test et profils v4 ci-dessous. Cours neuf masqué, collision refusée |
 | Livre avec chapitres HTML, ajout M2a | Contrat v2, fichiers de chapitre sous le projet | Vérifié en instance : Moodle 5.1.8+ local, 2026-11-01 | Deux chapitres dont un secondaire, sauvegarde/restauration, contenu et navigation apprenant. Pas d'import de médias incorporés |
 | Devoir individuel texte/fichier, ajout M2a | Contrat v2, note/seuil, grille ou guide explicites | Vérifié en instance : Moodle 5.1.8+ local, 2026-11-01 | Trois canaux de remise, grilles et guide restaurés ; remises et correction sous comptes fictifs via API natives, états attente/échec/réussite, retour visible. Groupes, dates, annotations et cycles de nouvelle remise hors profil |
 | Vérifier H5P/Page/Fichier et attestation : `scripts/moodle/verifier_cours.php` | Instance locale isolée, [contrat version 1](contrat-structure.md), deux comptes fictifs préparés | Vérifié en instance : Moodle 5.1.8+ local, 2026-11-01 | Cours construit puis restauré ; notes réelles 0/100 et 100/100, achèvements 3/2 et API de restriction. Parcours et PDF essayés séparément ; autres versions non garanties |
@@ -44,7 +44,20 @@ Les tests et la reconstruction de 2b, la refonte documentaire, 3a, 3b, 3c et leu
 
 ## Règles de conception et limites des moyens
 
-L'[outil de choix](modele-cours-de-base.md#choisir-les-activités) et [Concevoir une section](concevoir-section.md) guident le parcours, avec statut **documenté seulement, 2026-11-02**. Ils ne modifient pas les scripts. Choisir l'activité pour apprendre puis annoncer au responsable la voie réalisable. Glossaire, fichiers supplémentaires du Devoir, pratique sans correction et intégration H5P par défaut doivent encore être complétés ou éprouvés ; le contrôle automatique de l'expérience n'est pas encore fourni. La description riche et sa vérification doivent aussi être confirmées dans le contrat. Ne pas confondre recommandation éditoriale et capacité livrée.
+L'[outil de choix](modele-cours-de-base.md#choisir-les-activités) et [Concevoir une section](concevoir-section.md) guident le parcours, avec statut **documenté seulement, 2026-11-02**. Ils ne modifient pas les scripts. Choisir l'activité pour apprendre puis annoncer au responsable la voie réalisable. Ces profils sont désormais disponibles dans le contrat v5, avec les limites U2 ci-dessous ; le contrôle automatique de l'expérience U3 n'est pas encore fourni. Ne pas confondre recommandation éditoriale et capacité livrée.
+
+## U2 — ressources et progression, 2026-11-03
+
+**Vérifié en instance locale Moodle 5.1.8+**, après création, sauvegarde native users=0 et restauration dans un cours distinct :
+
+- Glossaire : deux définitions créées par API native, transportées dans la sauvegarde puis rétablies par l'étape explicite `restaurer_glossaires.php`. Moodle seul omet les termes en export sans utilisateurs ; aucune inclusion d'utilisateurs ni modification du cœur. Le profil vise les définitions du modèle, pas les contributions apprenantes.
+- Devoir : pièce PDF dans la consigne et remise texte sans note ni correction ; achèvement à la remise observé et aucune ligne de correction créée. Les fichiers de consigne sont vérifiés par empreinte.
+- H5P : Question Set d'entraînement rendu dans la section via une activité source furtive ; réponse et fin dans le navigateur produisent tentative, score et achèvement. Ce nouvel essai ne couvre pas toutes les bibliothèques ni le visionnage intégral d'une vidéo.
+- Section riche : HTML complet conservé et comparé, liens du H5P remappés dans le cours restauré. Captures écran/téléphone ; ce n'est pas une certification d'accessibilité ni de rendu sur un autre thème.
+- Test : achèvement à une tentative terminée distinct de la réussite ; paramètre de tentatives illimitées vérifié, douze tentatives réelles sur un compte de test.
+- Attestation : pratique remise ET Test terminé ET note au seuil. Échec remis et réussite sans pratique refusés ; toutes conditions satisfaites autorisées. PDF produit sous compte apprenant avec nom, date et code ; fond d'essai simple, pas nouvelle validation de tout modèle graphique.
+
+Lire [le contrat v5](contrat-experience-v5.md) pour les prérequis, les champs et l'étape de reprise des termes. Les réglages de site nécessaires aux activités furtives et le filtre doivent être disponibles ; le constructeur ne les active pas lui-même. Aucun essai de production dans U2.
 
 ## Choisir la réalisation
 

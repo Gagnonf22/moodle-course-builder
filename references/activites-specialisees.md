@@ -1,12 +1,12 @@
 # Collaboration et activités spécialisées
 
-Lire seulement la partie utile. **Statut :** modèles et dépendances observés hors ligne ; procédures à adapter aux fonctions du site, sans générateur inclus. La présence dans le corpus ne justifie pas d'ajouter une activité au cours.
+Lire seulement la partie utile. **Statut :** modèles et dépendances observés hors ligne ; procédures à adapter aux fonctions du site, sans générateur général inclus ; les profils locaux Leçon v4 et Glossaire v5 sont indiqués ci-dessous. La présence dans le corpus ne justifie pas d'ajouter une activité au cours.
 
 ## Forum et glossaire
 
 Pour un **forum**, préciser ce qui doit être publié, à qui répondre, les règles de visibilité et le retour attendu. Créer le type de forum approprié, régler groupes, abonnements, évaluation et achèvement si utiles. Tester publication et réponse sous le rôle prévu ; une consigne de participation ne configure pas une condition d'achèvement.
 
-Pour un **glossaire**, décider si les entrées sont fournies ou produites par les participants. Définir structure d'une entrée, catégories, validation et commentaires selon le besoin. Si une contribution est attendue, essayer sa création et vérifier le compteur d'achèvement réellement configuré. Une liste de définitions importée ne prouve pas la contribution d'un apprenant.
+Pour un **glossaire**, décider si les entrées sont fournies ou produites par les participants. Définir structure d'une entrée, catégories, validation et commentaires selon le besoin. Si une contribution est attendue, essayer sa création et vérifier le compteur d'achèvement réellement configuré. Une liste de définitions importée ne prouve pas la contribution d'un apprenant. Le [profil v5](contrat-experience-v5.md) fabrique les termes fournis ; leur restauration sans utilisateurs demande l'étape complémentaire explicite documentée, éprouvée localement.
 
 ## Leçon
 

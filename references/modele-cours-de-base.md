@@ -38,7 +38,7 @@ Exemple : un jalon avant une manipulation à conséquences, puis le test final ;
 
 Un autre besoin, par exemple discuter dans un Forum, reste à justifier par sa fonction. Une exception se présente au responsable avec son effet sur le parcours. La capacité technique Leçon reste disponible pour un besoin explicitement validé ; elle n'en fait pas le défaut de conception.
 
-Dans le **plan du responsable**, indiquer objectif, justification, action/trace, retour, suivi, prérequis et réalisation : scripts éprouvés, interface Moodle ou développement restant. Un paquet H5P n'est pas une intégration suivie. Glossaire, pièces de consigne et extensions de pratique attendent encore leur validation technique ; cette documentation ne les annonce pas livrés.
+Dans le **plan du responsable**, indiquer objectif, justification, action/trace, retour, suivi, prérequis et réalisation : scripts éprouvés, interface Moodle ou développement restant. Un paquet H5P n'est pas une intégration suivie. Le [contrat v5](contrat-experience-v5.md) fournit Glossaire et pratique avec pièces de consigne ; consulter ses prérequis et l'étape complémentaire de restauration des termes.
 
 ## Visuel et suivi
 

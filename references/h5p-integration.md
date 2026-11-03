@@ -43,3 +43,7 @@ Ne pas attribuer le rendu ou les traces à un plugin tiers sur la seule présenc
 Après copie/restauration, rouvrir l'intégration et vérifier qu'elle atteint le paquet du cours destination. Les adresses absolues `pluginfile.php` peuvent conserver des contextes anciens ; si nécessaire, réinsérer par l'éditeur. Vérifier ensuite accès, remise et suivi sans dépendre du cours source.
 
 **Preuves :** montage et achèvement rapportés par un concepteur, complétés par les observations de sauvegardes. Ni une intégration arbitraire, ni la portabilité de toute adresse, ni tous les chemins xAPI ne sont validés. [Activité H5P](https://docs.moodle.org/501/en/H5P_activity), [activités furtives](https://docs.moodle.org/501/en/Stealth_activities), [filtres](https://docs.moodle.org/501/en/Filters).
+
+## Essai complémentaire U2
+
+2026-11-03 : Question Set d’entraînement intégré par le constructeur v5 dans une section puis sauvegardé/restauré. Réponse et fin dans le navigateur sous apprenant ont produit une tentative, un score et un achèvement. Activité source furtive et marqueur remappé contrôlés ; aucune conclusion nouvelle sur le visionnage intégral des vidéos ou toutes les bibliothèques. Voir [le contrat v5](contrat-experience-v5.md).

@@ -1,4 +1,6 @@
-# Contrat local `cours/structure.json` — versions 1 à 4
+# Contrat local `cours/structure.json` — versions 1 à 5
+
+La [version 5](contrat-experience-v5.md) ajoute Glossaire, fichiers de consigne du Devoir, pratique sans note, H5P intégré par défaut, contrôle HTML de section, tentatives illimitées et séparation remise/réussite avec conditions multiples. Les versions 1 à 4 ci-dessous conservent leurs profils. La restauration des termes du Glossaire demande l'étape complémentaire documentée ; une sauvegarde native sans utilisateurs les omet.
 
 **2026-11-01 : vérifié en Moodle 5.1.8+ local pour H5P/Page/Fichier/attestation ; Feedback/Questionnaire contrôlés par doublures seulement.** Ce contrat décrit les attentes du vérificateur ; il n'annonce pas un générateur pour tous ses types. Lire [automatisation.md](automatisation.md) avant une exécution. Exemple synthétique : [exemple-structure.json](../assets/exemple-structure.json).
 

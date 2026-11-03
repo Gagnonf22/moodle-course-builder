@@ -10,7 +10,7 @@ Choisir explicitement : **achèvement à la remise sans correction obligatoire**
 
 **Exemple :** « Téléchargez le fichier joint, réalisez l'opération et remettez une capture ; la remise déclenche la coche ». **Contre-exemple :** Page « Atelier » avec auto-déclaration manuelle, sans canal de dépôt.
 
-Ces règles sont de conception. Le profil actuel doit être consulté dans [capacites.md](capacites.md) et le [contrat](contrat-structure.md) : fichiers supplémentaires et pratique sans correction attendent leurs essais et compléments techniques ; ne pas les déclarer fabriqués sur la seule foi de cette page.
+Ces règles sont de conception. Le profil actuel doit être consulté dans [capacites.md](capacites.md) et le [contrat](contrat-structure.md) : le [profil v5](contrat-experience-v5.md) fournit les fichiers de consigne et le Devoir sans note à achèvement sur remise, éprouvés localement le 2026-11-03 ; vérifier encore les réglages du cours cible.
 
 ## Préparer le contrat de travail
 
@@ -37,4 +37,4 @@ Avec données fictives : déposer sous un rôle apprenant, finaliser si nécessa
 
 Pour une restauration, vérifier en plus fichiers de consigne, plugins et définitions de correction ; l'absence volontaire des anciens travaux est normale dans une sauvegarde de modèle sans participants.
 
-**Résultat :** une activité de remise utilisable, une correction seulement si prévue et un retour accessible. La preuve ci-dessous porte sur le profil noté, pas sur la pratique sans correction. Profil local éprouvé le 2026-11-01 sur Moodle 5.1.8+ : construction, sauvegarde/restauration, trois modes de remise, guide et grilles conservés. Remises et corrections effectuées via API natives sous comptes fictifs étudiant/enseignant, sans écriture directe des résultats en base. État remis/non corrigé incomplet ; note insuffisante échouée ; note suffisante réussie. Affichage apprenant et correcteur essayé séparément. Ce succès ne couvre pas les groupes, annotations PDF ni tout paramétrage de Devoir.
+**Résultat :** une activité de remise utilisable, une correction seulement si prévue et un retour accessible. La preuve historique ci-dessous porte sur le profil noté. En complément, le 2026-11-03, la pratique v5 sans note avec PDF joint a été sauvegardée/restaurée : remise texte via API native, achèvement constaté sans ligne de correction ; téléchargement et lecture de la pièce PDF par l'apprenant dans le navigateur. Profil local éprouvé le 2026-11-01 sur Moodle 5.1.8+ : construction, sauvegarde/restauration, trois modes de remise, guide et grilles conservés. Remises et corrections effectuées via API natives sous comptes fictifs étudiant/enseignant, sans écriture directe des résultats en base. État remis/non corrigé incomplet ; note insuffisante échouée ; note suffisante réussie. Affichage apprenant et correcteur essayé séparément. Ce succès ne couvre pas les groupes, annotations PDF ni tout paramétrage de Devoir.

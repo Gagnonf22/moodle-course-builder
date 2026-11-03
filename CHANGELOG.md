@@ -1,5 +1,12 @@
 # Historique
 
+## Non publié — 2026-11-03 — U2, ressources et progression
+
+- Contrat v5 rétrocompatible : Glossaire, fichiers de consigne du Devoir, pratique sans note, H5P d'entraînement intégré par défaut et comparaison du HTML complet des sections.
+- Tests : tentatives illimitées explicites et achèvement à une tentative terminée, distinct de la réussite. Attestation avec conditions conjointes d'achèvement et de note, remappées après restauration.
+- Glossaire : les définitions du modèle sont transportées sans données utilisateurs dans une zone native de fichiers ; étape CLI locale explicite après restauration, car la restauration native users=0 omet les entrées. Aucun changement du cœur Moodle ni inclusion d'utilisateurs.
+- Vérifications par doublures et essais réels locaux ; portée, prérequis et limites dans les capacités et le contrat v5. Aucun push ni publication.
+
 ## Non publié — 2026-11-02 — Correction U1 et nom français
 
 - Nouveau nom `concepteur-cours-moodle` (ancien nom : `moodle-course-builder`) et inspecteur `inspecter_mbz.py`, avec test et appels alignés ; messages de l’inspecteur en français. Aucun changement de capacité ; espace UUID historique conservé à valeur identique.

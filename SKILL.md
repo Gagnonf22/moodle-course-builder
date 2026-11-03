@@ -35,7 +35,7 @@ Choisir la voie réellement disponible : interface Moodle, service autorisé, sc
 | Forum, glossaire, leçon, jeu ou autre activité spécialisée | [activites-specialisees.md](references/activites-specialisees.md) |
 | Notes, achèvement, restrictions, badges ou attestation | [suivi-reconnaissance.md](references/suivi-reconnaissance.md) |
 | Examiner, modifier, sauvegarder ou restaurer un .mbz | [sauvegardes.md](references/sauvegardes.md) ; [retouches H5P/attestation](references/retouches-activites.md) ; socle technique : [mbz-retouches-locales.md](references/mbz-retouches-locales.md) |
-| Choisir une API, un connecteur ou un script privilégié | [automatisation.md](references/automatisation.md) ; [contrat de vérification](references/contrat-structure.md) |
+| Choisir une API, un connecteur ou un script privilégié | [automatisation.md](references/automatisation.md) ; [contrat de vérification](references/contrat-structure.md) ; [contrat v5](references/contrat-experience-v5.md) pour ressources et progression |
 | Mettre en forme, vérifier l'accessibilité et essayer le cours | [qualite-validation.md](references/qualite-validation.md) |
 
 ## Contraintes qui changent la réalisation

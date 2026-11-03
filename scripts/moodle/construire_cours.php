@@ -28,9 +28,17 @@ $s = json_decode(file_get_contents("$projet/cours/structure.json"), false, 512, 
 require_once(__DIR__ . '/activites_etendues.php');
 try { mcb_valider_structure($s, $projet); }
 catch (InvalidArgumentException $e) { fwrite(STDERR, "Construction refusée : " . $e->getMessage() . "\n"); exit(2); }
+foreach ($s->sections as $sec) {
+    foreach ($sec->activities as $a) {
+        if (mcb_h5p_integre($a,$s->version ?? 1) && empty($CFG->allowstealth)) {
+            fwrite(STDERR,"H5P intégré : les activités furtives doivent être autorisées dans cette instance locale avant construction.\n");
+            exit(2);
+        }
+    }
+}
 foreach ($s->sections ?? [] as $section) {
     foreach ($section->activities ?? [] as $activity) {
-        if (!in_array($activity->type ?? '', ['h5p', 'page', 'resource', 'book', 'assign', 'qbank', 'quiz', 'feedback', 'lesson', 'customcert'], true) ||
+        if (!in_array($activity->type ?? '', ['h5p', 'page', 'resource', 'book', 'assign', 'qbank', 'quiz', 'feedback', 'lesson', 'customcert','glossary'], true) ||
                 (in_array($activity->type ?? '', ['feedback','customcert'], true) && ($s->version ?? 1) < 4)) {
             fwrite(STDERR, "Construction refusée : type non fabriqué par ce constructeur.\n");
             exit(2);
@@ -120,15 +128,16 @@ foreach ($s->sections as $num => $sec) {
             case 'customcert':
                 mcb_preparer_parcours($mi, $a);
                 if ($a->type === 'customcert') {
-                    $conditionid = $DB->get_field('course_modules', 'id', ['course'=>$course->id, 'idnumber'=>$a->condition], MUST_EXIST);
-                    $mi->availability = json_encode(['op'=>'&','c'=>[['type'=>'completion','cm'=>(int)$conditionid,
-                        'e'=>$a->condition_state ?? 1]],'showc'=>[true]]);
+                    $mi->availability = json_encode(mcb_availability_certificat($a,$course->id));
                 }
                 break;
             case 'qbank':
                 $mi->modulename = 'qbank';
                 $mi->type = 'standard';
                 $mi->visible = 0;
+                break;
+            case 'glossary':
+                mcb_preparer_glossaire($mi);
                 break;
             case 'quiz':
                 mcb_preparer_test($mi, $a);
@@ -141,6 +150,9 @@ foreach ($s->sections as $num => $sec) {
                 break;
             case 'assign':
                 mcb_preparer_devoir($mi, $a);
+                if (isset($a->attachments)) {
+                    $mi->introattachments = brouillon(array_map(fn($file)=>"$projet/$file",$a->attachments));
+                }
                 break;
             case 'h5p':
                 $mi->modulename = 'h5pactivity';
@@ -150,6 +162,7 @@ foreach ($s->sections as $num => $sec) {
                 $mi->enabletracking = 1;
                 $mi->reviewmode = 1;
                 $mi->displayoptions = 15;
+                if (mcb_h5p_integre($a,$s->version ?? 1)) { $mi->visibleoncoursepage = 0; }
                 break;
             case 'page':
                 $mi->modulename = 'page';
@@ -176,6 +189,7 @@ foreach ($s->sections as $num => $sec) {
         $mi->module = $DB->get_field('modules', 'id', ['name' => $mi->modulename], MUST_EXIST);
         achevement($mi, $a);
         $cm = create_module($mi);
+        if ($a->type === 'glossary') { mcb_finaliser_glossaire($cm,$a); }
         if (in_array($a->type, ['feedback','lesson','customcert'], true)) { mcb_finaliser_parcours($cm, $a, $projet); }
         if (in_array($a->type, ['qbank','quiz'], true)) { mcb_finaliser_test($cm, $a); }
         if (in_array($a->type, ['book','assign'], true)) { mcb_finaliser_activite($cm, $a, $projet); }
@@ -187,6 +201,9 @@ foreach ($s->sections as $num => $sec) {
             $cmids[] = $cm->coursemodule;
         }
         echo "  [$num] $a->type : $a->name (cmid $cm->coursemodule)\n";
+    }
+    if (($s->version ?? 1) >= 5) {
+        course_update_section($course,$section,['summary'=>mcb_resume_section($sec,$projet,$course->id,5),'summaryformat'=>FORMAT_HTML]);
     }
 }
 

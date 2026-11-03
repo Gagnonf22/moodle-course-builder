@@ -86,11 +86,11 @@ function mcb_valider_tests($s): void {
             else {
                 if (!isset($banks[$a->bank ?? '']) || !is_array($a->questions ?? null) || !$a->questions ||
                         count($a->questions) !== count(array_unique($a->questions)) ||
-                        !is_int($a->attempts ?? null) || $a->attempts < 1 ||
+                        !is_int($a->attempts ?? null) || $a->attempts < (($s->version ?? 1) >= 5 ? 0 : 1) ||
                         !in_array($a->grademethod ?? '', ['highest','average','first','last'], true) ||
                         !mcb_nombre($a->grade ?? null) || $a->grade <= 0 ||
                         !mcb_nombre($a->gradepass ?? null) || $a->gradepass < 0 || $a->gradepass > $a->grade ||
-                        !in_array($a->completion, ['none','manual','grade','pass'], true) ||
+                        !in_array($a->completion, ($s->version ?? 1) >= 5 ? ['none','manual','grade','pass','submit'] : ['none','manual','grade','pass'], true) ||
                         ($a->completion === 'pass' && $a->gradepass <= 0)) {
                     throw new InvalidArgumentException('Test : banque précédente, questions uniques, tentatives, méthode et seuil valides requis.');
                 }
@@ -137,6 +137,7 @@ function mcb_preparer_test($mi, $a): void {
     foreach (['timeopen','timeclose','attemptonlast','sumgrades','timelimit','graceperiod','delay1','delay2',
             'showuserpicture','showblocks','completionattemptsexhausted','completionminattempts'] as $k) { $mi->$k = 0; }
     $mi->preferredbehaviour = 'deferredfeedback'; $mi->attempts = $a->attempts;
+    if ($a->completion === 'submit') { $mi->completionminattemptsenabled = 1; $mi->completionminattempts = 1; }
     $mi->grademethod = ['highest'=>1,'average'=>2,'first'=>3,'last'=>4][$a->grademethod];
     $mi->grade = $a->grade; $mi->gradepass = $a->gradepass;
     $mi->decimalpoints = 2; $mi->questiondecimalpoints = -1;
@@ -240,7 +241,9 @@ function mcb_verifier_test($cm, $a, int $courseid): bool {
     $gi = grade_item::fetch(['courseid'=>$courseid,'itemmodule'=>'quiz','iteminstance'=>$cm->instance]);
     if (!$gi || (float)$gi->grademax !== (float)$a->grade || (float)$gi->gradepass !== (float)$a->gradepass ||
             (int)$quiz->attempts !== $a->attempts || (int)$quiz->grademethod !== ['highest'=>1,'average'=>2,'first'=>3,'last'=>4][$a->grademethod] ||
-            $quiz->preferredbehaviour !== 'deferredfeedback' || $quiz->intro !== $a->intro) { return false; }
+            $quiz->preferredbehaviour !== 'deferredfeedback' || $quiz->intro !== $a->intro ||
+            (int)$quiz->completionminattempts !== ($a->completion === 'submit' ? 1 : 0) ||
+            (int)$quiz->completionattemptsexhausted !== 0) { return false; }
     $form = new stdClass(); mcb_preparer_test($form, $a);
     quiz_process_options($form);
     foreach (['attempt','correctness','maxmarks','marks','specificfeedback','generalfeedback','rightanswer','overallfeedback'] as $k) {

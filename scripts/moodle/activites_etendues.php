@@ -2,6 +2,7 @@
 // Contrat v2 : Livre et Devoir. Fonctions chargées après le garde-fou local par les CLI.
 require_once(__DIR__ . '/tests_natifs.php');
 require_once(__DIR__ . '/parcours_retroaction.php');
+require_once(__DIR__ . '/experience_v5.php');
 
 /** Lit un contenu du projet, sans sortie de sa racine. */
 function mcb_contenu(string $projet, string $chemin): string {
@@ -16,10 +17,11 @@ function mcb_contenu(string $projet, string $chemin): string {
 
 /** Vérifie les nouvelles capacités avant toute création. V1 conserve son contrat historique. */
 function mcb_valider_structure($s, string $projet): void {
-    if (!is_object($s) || !in_array($s->version ?? 1, [1, 2, 3, 4], true) || !is_array($s->sections ?? null)) {
+    if (!is_object($s) || !in_array($s->version ?? 1, [1, 2, 3, 4, 5], true) || !is_array($s->sections ?? null)) {
         throw new InvalidArgumentException('Version ou sections du contrat invalides.');
     }
     $keys = [];
+    mcb_valider_v5($s, $projet);
     foreach ($s->sections as $sec) {
         foreach ($sec->activities ?? [] as $a) {
             if (($s->version ?? 1) === 1 && in_array($a->type ?? '', ['book', 'assign'], true)) {
@@ -55,13 +57,16 @@ function mcb_valider_structure($s, string $projet): void {
                 }
                 $max = $a->grade ?? null;
                 $pass = $a->gradepass ?? 0;
-                if (!is_numeric($max) || $max <= 0 || !is_numeric($pass) || $pass < 0 || $pass > $max ||
+                $practice = ($s->version ?? 1) >= 5 && is_numeric($max) && (float)$max === 0.0;
+                if (!is_numeric($max) || ($practice ? in_array($a->completion,['grade','pass'],true) : $max <= 0) ||
+                        !is_numeric($pass) || $pass < 0 || $pass > $max ||
                         ($a->completion === 'pass' && $pass <= 0) ||
                         !is_int($a->submission->maxfiles ?? 1) || ($a->submission->maxfiles ?? 1) < 1 ||
                         !is_int($a->submission->maxbytes ?? 1048576) || ($a->submission->maxbytes ?? 1048576) < 1) {
                     throw new InvalidArgumentException('Devoir : note, seuil ou limites de remise invalides.');
                 }
-                mcb_definition($a); // Valide également les critères avant toute écriture.
+                if ($practice && isset($a->grading)) { throw new InvalidArgumentException('Pratique sans note : aucun barème requis.'); }
+                if (!$practice) { mcb_definition($a); }
             }
         }
     }
@@ -139,7 +144,7 @@ function mcb_preparer_devoir($mi, $a): void {
     $mi->assignfeedback_file_enabled = 0;
     $mi->assignfeedback_editpdf_enabled = 0;
     $mi->assignfeedback_offline_enabled = 0;
-    $mi->advancedgradingmethod_submissions = $a->grading->method;
+    $mi->advancedgradingmethod_submissions = $a->grading->method ?? '';
 }
 
 /** Complète le module neuf par ses chapitres ou sa définition de correction. */
@@ -159,7 +164,7 @@ function mcb_finaliser_activite($cm, $a, string $projet): void {
                 context_module::instance($cm->coursemodule), $chapter)->trigger();
             book_preload_chapters($book);
         }
-    } elseif ($a->type === 'assign') {
+    } elseif ($a->type === 'assign' && isset($a->grading)) {
         require_once($CFG->dirroot . '/grade/grading/lib.php');
         $manager = get_grading_manager(context_module::instance($cm->coursemodule), 'mod_assign', 'submissions');
         $manager->set_active_method($a->grading->method);
@@ -192,7 +197,9 @@ function mcb_verifier_etendue($cm, $a, string $projet, int $courseid): bool {
     $assign = new assign(context_module::instance($cm->id), $cm, get_course($courseid));
     $record = $assign->get_instance();
     $gi = grade_item::fetch(['courseid'=>$courseid,'itemmodule'=>'assign','iteminstance'=>$cm->instance]);
-    if (!$gi || (float)$gi->grademax !== (float)$a->grade || (float)$gi->gradepass !== (float)($a->gradepass ?? 0) ||
+    $gradeok = (float)$a->grade === 0.0 ? (!$gi || in_array((int)$gi->gradetype,[GRADE_TYPE_NONE,GRADE_TYPE_TEXT],true)) :
+        ($gi && (float)$gi->grademax === (float)$a->grade && (float)$gi->gradepass === (float)($a->gradepass ?? 0));
+    if (!$gradeok || (float)$record->grade !== (float)$a->grade ||
             $record->intro !== $a->intro || (int)$record->completionsubmit !== ($a->completion === 'submit' ? 1 : 0) ||
             (bool)$assign->get_submission_plugin_by_type('onlinetext')->is_enabled() !== ($a->submission->text ?? false) ||
             (bool)$assign->get_submission_plugin_by_type('file')->is_enabled() !== ($a->submission->files ?? false)) { return false; }
@@ -201,6 +208,8 @@ function mcb_verifier_etendue($cm, $a, string $projet, int $courseid): bool {
         if ((int)$file->get_config('maxfilesubmissions') !== ($a->submission->maxfiles ?? 1) ||
                 (int)$file->get_config('maxsubmissionsizebytes') !== ($a->submission->maxbytes ?? 1048576)) { return false; }
     }
+    if (!mcb_verifier_pieces($cm,$a,$projet)) { return false; }
+    if (!isset($a->grading)) { return true; }
     $manager = get_grading_manager(context_module::instance($cm->id), 'mod_assign', 'submissions');
     $method = $a->grading->method;
     if ($manager->get_active_method() !== $method) { return false; }

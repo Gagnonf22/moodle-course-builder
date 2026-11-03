@@ -18,7 +18,7 @@ require_once($CFG->libdir . '/completionlib.php');
 
 $projet = rtrim($opts['projet'], '/\\');
 $s = json_decode(file_get_contents("$projet/cours/structure.json"), false, 512, JSON_THROW_ON_ERROR);
-if (!isset($s->sections) || !is_array($s->sections) || !in_array($s->version ?? 1, [1,2,3,4], true)) {
+if (!isset($s->sections) || !is_array($s->sections) || !in_array($s->version ?? 1, [1,2,3,4,5], true)) {
     fwrite(STDERR, "Contrat structure invalide.\n"); exit(2);
 }
 require_once(__DIR__ . '/activites_etendues.php');
@@ -28,10 +28,10 @@ $probes = isset($opts['apprenants']) ? json_decode(file_get_contents($opts['appr
 $keys = [];
 foreach ($s->sections as $num => $sec) {
     foreach ($sec->activities as $i => $a) {
-        if (!in_array($a->type ?? '', ['h5p','page','resource','customcert','feedback','questionnaire','book','assign','qbank','quiz','lesson'], true) ||
+        if (!in_array($a->type ?? '', ['h5p','page','resource','customcert','feedback','questionnaire','book','assign','qbank','quiz','lesson','glossary'], true) ||
                 !in_array($a->completion ?? '', ['none','manual','view','grade','pass','submit','end'], true) ||
                 ($a->completion === 'end' && $a->type !== 'lesson') ||
-                ($a->completion === 'submit' && !in_array($a->type, ['feedback','assign'], true))) {
+                ($a->completion === 'submit' && !in_array($a->type, ['feedback','assign','quiz'], true))) {
             fwrite(STDERR, "Type ou achèvement non géré.\n"); exit(2);
         }
         if (isset($a->idnumber)) {
@@ -44,7 +44,7 @@ foreach ($s->sections as $num => $sec) {
 }
 foreach ($s->sections as $sec) {
     foreach ($sec->activities as $a) {
-        if ($a->type === 'customcert' && (!isset($a->condition) || !isset($keys[$a->condition]) ||
+        if ($a->type === 'customcert' && !isset($a->conditions) && (!isset($a->condition) || !isset($keys[$a->condition]) ||
                 $keys[$a->condition][2]->completion !== 'pass' || !isset($a->idnumber))) {
             fwrite(STDERR, "Attestation : clé et condition de réussite requises.\n"); exit(2);
         }
@@ -70,6 +70,10 @@ $attendu = 0;
 foreach ($s->sections as $num => $sec) {
     $section = $modinfo->get_section_info($num);
     verif($section && $section->name === $sec->name, "section $num : $sec->name");
+    if (($s->version ?? 1) >= 5) {
+        verif($section && (int)$section->summaryformat === (int)FORMAT_HTML &&
+            $section->summary === mcb_resume_section($sec,$projet,$course->id,5),'HTML riche et intégrations de la section');
+    }
     $cms = array_values(array_filter(array_map(fn($id) => $modinfo->cms[$id], $modinfo->sections[$num] ?? [])));
     verif(count($cms) == count($sec->activities), "  " . count($cms) . " activité(s) sur " . count($sec->activities));
     foreach ($sec->activities as $i => $a) {
@@ -83,13 +87,19 @@ foreach ($s->sections as $num => $sec) {
         $detail = "achèvement $cm->completion";
         $ok = $cm->completion == $att;
         if ($a->completion === 'view') { $ok = $ok && $cm->completionview == 1; }
+        if ($a->completion === 'submit' && $a->type === 'quiz') {
+            $ok = $ok && $cm->completiongradeitemnumber === null && (int)$cm->completionpassgrade === 0;
+        }
         if (in_array($a->completion, ['grade', 'pass'])) {
             $ok = $ok && ($cm->completiongradeitemnumber === '0' || $cm->completiongradeitemnumber === 0);
             $ok = $ok && (int)$cm->completionpassgrade === ($a->completion === 'pass' ? 1 : 0);
             $detail .= ", note requise" . ($a->completion === 'pass' ? ' + réussite' : '');
         }
         if ($a->course_required ?? ($a->completion !== 'none')) { $attendu++; }
-        if ($a->type === 'lesson') {
+        if ($a->type === 'glossary') {
+            $ok = $ok && mcb_verifier_glossaire($cm,$a);
+            $detail .= ', termes et définitions du Glossaire';
+        } elseif ($a->type === 'lesson') {
             $ok = $ok && mcb_verifier_parcours($cm, $a, $projet);
             $detail .= ', pages et sauts de Leçon v4';
         } elseif (in_array($a->type, ['qbank','quiz'], true)) {
@@ -99,6 +109,9 @@ foreach ($s->sections as $num => $sec) {
             $ok = $ok && mcb_verifier_etendue($cm, $a, $projet, $course->id);
             $detail .= ', contenu et configuration v2';
         } elseif ($a->type === 'h5p') {
+            if (mcb_h5p_integre($a,$s->version ?? 1)) {
+                $ok = $ok && (int)$cm->visible === 1 && (int)$cm->visibleoncoursepage === 0;
+            }
             $f = array_values($fs->get_area_files($cmctx->id, 'mod_h5pactivity', 'package', 0, '', false));
             $hash = $f ? $f[0]->get_contenthash() : '';
             $okfichier = $hash === sha1_file("$projet/$a->package");
@@ -131,6 +144,12 @@ foreach ($s->sections as $num => $sec) {
                 $ok = $ok && json_decode($cm->availability ?? 'null') == ($a->availability ?? null);
             }
             if ($a->type === 'customcert') {
+                if (isset($a->conditions)) {
+                    $ok = $ok && json_decode($cm->availability ?? 'null') == mcb_availability_certificat($a,$course->id);
+                    mcb_verifier_acces_v5($cm,$course,$probes);
+                    verif($ok,"  $a->type : conditions multiples et contenu");
+                    continue;
+                }
                 [$cn, $ci, $cond] = $keys[$a->condition];
                 $conditionid = null;
                 foreach ($modinfo->sections[$cn] ?? [] as $candidateid) {

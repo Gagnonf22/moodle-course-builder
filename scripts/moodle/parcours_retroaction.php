@@ -80,9 +80,10 @@ function mcb_valider_parcours($s, string $projet): void {
                 if (count($canend) !== count($pages) + 1) { throw new InvalidArgumentException('Fin de Leçon inaccessible depuis une page.'); }
             } else {
                 $c = $a->certificate ?? null;
-                if (!is_object($c) || !is_string($c->background ?? null) ||
-                        !isset($previous[$a->condition ?? '']) || $previous[$a->condition]->completion !== 'pass' ||
-                        !in_array($a->condition_state ?? 1, [1,2], true) ||
+                $validcondition = ($s->version ?? 1) >= 5 && isset($a->conditions) ? mcb_valider_conditions($a,$previous) :
+                    (isset($previous[$a->condition ?? '']) && $previous[$a->condition]->completion === 'pass' &&
+                    in_array($a->condition_state ?? 1,[1,2],true));
+                if (!is_object($c) || !is_string($c->background ?? null) || !$validcondition ||
                         !in_array($a->completion, ['none','manual','view'], true) || ($a->course_required ?? false) !== false) {
                     throw new InvalidArgumentException('Attestation : fond, condition précédente de réussite et profil sans critère de cours requis.');
                 }

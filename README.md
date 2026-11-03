@@ -31,6 +31,10 @@ Les statuts sont datés et limités à des opérations précises dans [la matric
 
 Les essais d'instance du 1er novembre 2026 ont utilisé Moodle **5.1.8+** et Custom certificate **5.0.11**, avec des comptes fictifs dans des cours masqués. Ils ne garantissent pas une autre version, un autre thème ou une installation de production. Le pack de langue installé n'a pas suffi à obtenir un affichage et une date PDF en français dans ces essais.
 
+## Ajouts locaux U2 non publiés
+
+Le contrat v5 ajoute Glossaire, pratique sans note avec fichiers de consigne, H5P intégré par défaut, contrôle HTML des sections, tentatives illimitées et conditions multiples de reconnaissance. Remise du Test et réussite sont séparables. Essais concrets du 2026-11-03 et limites dans [les capacités](references/capacites.md#u2--ressources-et-progression-2026-11-03). La restauration native sans utilisateurs omet les termes du Glossaire : l'étape CLI locale explicite fournie les reprend depuis les définitions transportées dans le `.mbz`.
+
 ## Prérequis
 
 La lecture de la skill et la conception documentaire ne demandent aucun serveur Moodle. Pour les outils, prévoir selon la tâche :
@@ -41,7 +45,7 @@ La lecture de la skill et la conception documentaire ne demandent aucun serveur 
 - **Custom certificate**, compatible avec l'instance, pour les opérations d'attestation ; ce plugin n'est pas fourni.
 - Pour H5P, les médias et une sauvegarde de référence autorisée contenant les bibliothèques compatibles. La skill ne fournit pas ces bibliothèques et ne les télécharge pas automatiquement.
 
-Les scripts PHP sont des outils de validation locale avec privilèges : lire [leurs conditions d'exécution](references/automatisation.md) et [les contrats](references/contrat-structure.md) avant usage. Les contrats v1 à v4 restent pris en charge. Aucun outil, compte ou serveur n'est installé par la copie de cette skill.
+Les scripts PHP sont des outils de validation locale avec privilèges : lire [leurs conditions d'exécution](references/automatisation.md) et [les contrats](references/contrat-structure.md) avant usage. Les contrats v1 à v5 restent pris en charge ; voir le [profil v5](references/contrat-experience-v5.md), dont l’étape complémentaire de restauration des termes du Glossaire. Aucun outil, compte ou serveur n'est installé par la copie de cette skill.
 
 ## Installation dans un agent local
 
@@ -68,7 +72,7 @@ Depuis la racine de la skill, exécuter les tests sans créer de cache :
 python -B -m unittest discover -s tests -q
 ```
 
-Configurer `FFMPEG_EXE` et `PHP_BIN` si les exécutables ne sont pas disponibles par leur nom. La suite comporte **115 tests** ; les tests dépendants d'outils absents peuvent être ignorés et doivent être signalés comme tels. Ce résultat hors ligne ne remplace pas l'essai d'un vrai parcours étudiant dans l'instance cible.
+Configurer `FFMPEG_EXE` et `PHP_BIN` si les exécutables ne sont pas disponibles par leur nom. La suite comporte **126 tests** ; les tests dépendants d'outils absents peuvent être ignorés et doivent être signalés comme tels. Ce résultat hors ligne ne remplace pas l'essai d'un vrai parcours étudiant dans l'instance cible.
 
 ## Limites et diffusion
 

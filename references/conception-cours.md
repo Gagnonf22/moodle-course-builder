@@ -22,7 +22,7 @@ Livrable de phase 1 : **une ligne par activité ou ressource**, identifiée dans
 
 | Type Moodle exact (élément identifié) | Pourquoi cet outil : objectif et règle de choix | Alternative écartée et raison | Condition d'achèvement | Fabriqué par la skill ou à créer à la main |
 |---|---|---|---|---|
-| `assign` — Réaliser et vérifier | Pratiquer et remettre une trace | Page à coche manuelle : aucune remise réelle | À la remise, sans correction obligatoire | Profil noté fourni ; pratique et pièces jointes à compléter/éprouver, sinon création manuelle |
+| Devoir (`assign`) — Réaliser et vérifier | Pratiquer et remettre une trace | Page à coche manuelle : aucune remise réelle | À la remise, sans correction obligatoire | Profil v5 de pratique sans note et fichiers de consigne ; prérequis et essais du cours à vérifier |
 
 **La construction ne commence qu'après validation de ce tableau par la personne responsable.** Consigner l'approbation avec sa portée dans le projet. Le brouillon et les maquettes suivent leurs validations propres ; un choix d'activité ne vaut pas autorisation de déploiement.
 
