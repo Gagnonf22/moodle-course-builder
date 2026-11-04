@@ -69,6 +69,6 @@ Si un cours de référence est approuvé, reprendre **par défaut sa direction v
 
 ## Relire comme un apprenant
 
-À chaque phase : où commence-t-on, que fait-on, où reste-t-on, qu'obtient-on, que signifie la coche ? Vérifier activités, titres, contenu propre à l'étape, absence de notes au responsable et de composants vides. En 4b, observer le comportement sous rôle apprenant ; une capture ou un XML ne démontre pas l'achèvement.
+À chaque phase : où commence-t-on, que fait-on, où reste-t-on, qu'obtient-on, que signifie la coche ? Vérifier activités, titres, contenu propre à l'étape, absence de notes au responsable et de composants vides. En 5, observer le comportement sous rôle apprenant ; une capture ou un XML ne démontre pas l'achèvement.
 
 **Statut : documenté seulement.** Ces règles ne prouvent pas un parcours reconstruit ; les extensions de fabrication demandent leur validation propre.

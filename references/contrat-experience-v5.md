@@ -14,6 +14,8 @@ Les activités furtives doivent être autorisées dans le site local et prises e
 
 ## Glossaire
 
+**Destination utilisateur :** aucune installation Moodle ni exécution de CLI à demander. Le script de reprise ci-dessous est réservé au développement. Ce contrat ne fournit pas encore un fichier d'import natif des termes testé pour l'utilisateur ; fournir les définitions et annoncer une saisie manuelle ou une voie d'import à vérifier dans son Moodle existant. Cette limite ne doit pas être masquée par une promesse de `.mbz` autonome.
+
 ```json
 {"type":"glossary","idnumber":"lexique","name":"Comprendre les repères",
  "intro":"<p>Les termes du parcours.</p>","completion":"none",

@@ -2,7 +2,15 @@
 
 Consulter cette page pour choisir un outil ou annoncer la portée d'une livraison. Les statuts s'appliquent à une opération précise, pas à tout Moodle.
 
+**Parcours utilisateur :** aucune installation de Moodle local. Préparer les livrables réalisables puis guider leur import et leurs essais par l'utilisateur dans son Moodle existant. Les capacités natives éprouvées localement décrivent les outils de développement, pas une dépendance utilisateur ni un générateur hors ligne universel. Pour le Glossaire v5, la génération d'un XML natif depuis le contrat reste à réaliser et à vérifier ; l'import d'un XML natif existant est éprouvé dans le complément ci-dessous. Fournir les définitions ou le XML disponible et annoncer les manipulations nécessaires. Voir [le parcours d'import](sauvegardes.md#parcours-utilisateur-sans-serveur-local).
+
 ## Lire les preuves
+
+**Observations partielles sur site cible, rapportées par le responsable le 2026-11-03 :** captures montrant définitions du Glossaire, salutation par prénom, remise de texte, ouverture du PDF de consigne, relecture de deux questions et PDF d'attestation renseigné ; formulaire d'avis affiché. Le contexte comporte des fonctions d'édition, des vues non inscrites et un Test en prévisualisation. Cette preuve visuelle ne valide pas les achèvements, la progression dynamique, les restrictions d'attestation ou l'envoi de l'avis sous rôle apprenant. H5P intégré, téléphone, clavier et efficacité pédagogique restent à vérifier sur ce site. Version exacte et thème non relevés dans ce retour visuel.
+
+**Profil complémentaire du 2026-11-03, Moodle 5.1.8+ local :** sauvegarde sans utilisateurs restaurée, puis import par formulaire natif d'un XML de trois définitions exporté nativement. Parcours réel au navigateur : H5P intégré terminé, Devoir texte remis sans note, Test à deux questions envoyé en échec puis repris avec succès, Feedback envoyé. Attestation refusée après échec et après réussite sans pratique, autorisée quand les conditions sont réunies ; PDF obtenu et ouvert. Le vérificateur confirme la structure et les deux états d'accès finaux. Les essais locaux sont désormais complétés par les observations visuelles partielles du site cible décrites ci-dessus, sans validation complète du parcours apprenant. Ce profil ne valide pas l'accessibilité complète, les interactions intégrales sur téléphone ou l'efficacité pédagogique.
+
+**Complément du 2026-11-03 :** import natif d'un XML de Glossaire existant : 15 entrées et neuf fichiers intégrés conservés ; aucun générateur XML v5 ajouté. Filtre RÉCIT et bouton TinyMCE installés et éprouvés dans l'instance de développement : prénom par compte, barres cours/section 0/50/100 % et insertion d'une balise par le bouton. Voir [personnalisation-progression.md](personnalisation-progression.md). Essais limités à ces fonctions ; fonctionnement complet et rendu apprenant restent à valider sur le site cible.
 
 - **Construit et vérifié hors ligne** : opération exécutée sur fichiers ; préciser si un contrôle repose seulement sur une doublure. Aucune conclusion automatique sur Moodle.
 - **Vérifié en instance** : préciser date, environnement et fonction réellement observée. Un succès rapporté par l'utilisateur reste signalé comme tel ; il ne valide pas un autre générateur.
@@ -10,7 +18,7 @@ Consulter cette page pour choisir un outil ou annoncer la portée d'une livraiso
 
 Les statuts historiques ci-dessous sont datés du **2026-11-01** ; les ajouts U2 sont datés du **2026-11-03**. Réviser la date et la portée lorsqu'une nouvelle preuve change le statut. Une documentation n'a pas besoin d'être rebaptisée « inconnue » parce qu'un générateur n'existe pas.
 
-## Ce que la version 0.7.0 fournit
+## Ce que la skill fournit
 
 Le [parcours de cocréation](conception-cours.md) et le [modèle de base](modele-cours-de-base.md) définissent le résultat à préparer avec validation humaine. Leur statut est **documenté seulement** : ils ne modifient pas les possibilités effectives des scripts ci-dessous.
 

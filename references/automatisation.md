@@ -2,6 +2,8 @@
 
 Lire avant une action via API, connecteur, navigateur ou script privilégié. Partir des fonctions réellement disponibles ; ne pas déduire une capacité d'écriture d'un nom d'outil ou d'un export Moodle.
 
+Le parcours utilisateur est la préparation hors ligne puis [l'import et l'essai dans son Moodle existant](sauvegardes.md#parcours-utilisateur-sans-serveur-local). Ne pas lui demander d'installer ou de démarrer un serveur local. Les scripts PHP inclus servent au développement de la skill dans une instance isolée déjà disponible ; ils ne sont ni requis pour utiliser la skill ni à déployer sur le site cible. Garder leurs protections locales intactes.
+
 | Voie | Ce qu'il faut établir | Limite |
 |---|---|---|
 | Interface Moodle | Rôle, capacité dans le cours, composants et options accessibles | Le compte enseignant n'est pas un compte d'administration |

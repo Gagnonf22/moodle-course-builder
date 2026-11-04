@@ -2,6 +2,18 @@
 
 Lire pour exploiter une sauvegarde existante. Utiliser [mbz-retouches-locales.md](mbz-retouches-locales.md) pour le socle Python, et [qualite-validation.md](qualite-validation.md) pour l'essai après restauration.
 
+## Parcours utilisateur sans serveur local
+
+La skill ne demande aucune installation de Moodle local ni aucun serveur web à transporter. Les essais se font dans le Moodle existant de l'utilisateur, selon les droits et règles de son organisation.
+
+1. Préparer hors ligne les contenus, ressources et paquets que les outils disponibles savent réellement produire. Livrer un `.mbz` seulement si une voie de fabrication compatible est disponible ; sinon, expliciter les créations manuelles nécessaires et fournir les fichiers utiles. Un plan JSON n'est pas une sauvegarde importable.
+2. Joindre au livrable les composants requis, limites connues, consignes de restauration/import par l'interface et manipulations complémentaires. Prévoir un cours de test distinct autorisé ; si l'utilisateur n'a pas les droits nécessaires, faire intervenir la personne habilitée, sans demander un serveur personnel.
+3. L'utilisateur restaure le `.mbz` ou importe les ressources dans ce cours de test. Ne pas remplacer un cours avec participants pour un simple essai. L'agent n'envoie rien au site sur la seule autorisation de préparer les fichiers.
+4. Fournir une fiche d'essai adaptée au parcours : navigation, médias, remise, résultats, achèvement, restrictions, attestation si présente, clavier et mobile. Décrire les actions et résultats attendus avec les cas pertinents de réussite, d'échec et de condition manquante.
+5. Recueillir observations, messages d'erreur et captures utiles, sans identifiants, secrets ou traces de participants réels ; corriger puis faire réessayer les fonctions touchées. Sans retour, annoncer « À valider dans le Moodle cible », même après un succès de développement local.
+
+Pour le Glossaire v5, le script local de reprise est réservé au développement. La skill ne livre pas encore de fichier d'import natif des termes testé sur le site cible : annoncer ce manque, fournir les définitions et prévoir leur saisie manuelle ou une autre voie d'import vérifiée. Ne pas demander l'exécution de PHP ni l'accès au serveur de l'utilisateur pour contourner cette limite.
+
 ## Identifier la bonne source
 
 Relever chemin privé, taille, SHA-256 et rôle : cours complet, version précédente, export partiel ou collection de modèles. Deux fichiers de même nom peuvent contenir des cours différents. Garder l'original intact et écrire les sorties sous de nouveaux noms ; ne pas déduire la provenance d'un numéro de cours seul.

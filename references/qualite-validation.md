@@ -4,7 +4,9 @@ Lire pour préparer les essais d'un livrable ou diagnostiquer un écart. Choisir
 
 ## Relecture de l'expérience
 
-À chaque phase, appliquer les points UX de [la démarche](conception-cours.md) : KISS, choix d'activités, titres, séparation des deux publics et contenu propre à l'étape. En phase 4, relire sections et activités comme un apprenant, avant toute livraison : dépliants et boutons non vides, médias présents, pas de code interne ni de note de chantier, consignes regroupées, remise réelle pour la pratique. Exemple : la trace et la coche annoncées correspondent ; contre-exemple : Page cochée supposée prouver une remise.
+Juger le livrable selon sa phase et son mandat : le brouillon doit permettre d’essayer le fond et les activités, sans exiger une finition graphique. Un essai de composants ne démontre pas la qualité pédagogique d’un cours complet. À chaque phase, appliquer les points UX de [la démarche](conception-cours.md) : KISS, choix d'activités, titres, séparation des deux publics et contenu propre à l'étape. En phase 4, relire sections et activités comme un apprenant, avant toute livraison : dépliants et boutons non vides, médias présents, pas de code interne ni de note de chantier, consignes regroupées, remise réelle pour la pratique. Exemple : la trace et la coche annoncées correspondent ; contre-exemple : Page cochée supposée prouver une remise.
+
+À partir des captures, proposer les améliorations utiles et distinguer contenu modifiable, comportement natif et état encore inconnu. Un libellé natif de remise, le cumul de rôles ou un repère de navigation ne constituent pas seuls une panne ; vérifier un effet avant de demander une intervention technique.
 
 Un contrôle automatique de signalements est prévu mais non livré à ce stade. Il ne remplacera ni la relecture ni l'essai. Les réserves techniques, captures d'essai et statuts vont dans les fichiers du responsable ; ils ne s'affichent pas dans le cours. Les liens suivent la [convention documentée](concevoir-section.md#liens-et-changements-donglet), distincte d'une obligation WCAG.
 
@@ -17,6 +19,8 @@ Contrôler les fichiers et liens, formats attendus, intégrité des médias, dé
 Pour comparer une reconstruction, définir à l'avance les écarts de représentation admissibles. Sur les H5P reconstruits, l'ordre des clés JSON, les fins de ligne et les UUID `subContentId` sont traités séparément des réponses, temps, seuils et médias. Ne pas supprimer de champs fonctionnels pour obtenir artificiellement une égalité.
 
 ## Dans l'environnement autorisé
+
+Guider l'utilisateur pour importer/restaurer les livrables dans un cours de test autorisé de son Moodle existant, puis lui fournir les actions et résultats attendus du tableau ci-dessous, adaptés au plan. Recueillir ses observations et captures assainies, corriger et faire réessayer. Aucune installation Moodle locale n'est requise ; un essai local de développement ne remplace pas ce retour du site cible. Sans ce retour, les fonctions concernées restent à valider.
 
 Conserver un moyen de retour adapté à l'opération. Sur un essai de parcours, utiliser un véritable compte apprenant de test : la prévisualisation administrateur peut contourner des restrictions. Pour comparer réussite et échec, choisir des comptes ou états séparés qui n'héritent pas des mêmes traces.
 
@@ -43,7 +47,7 @@ L'expérience utilisateur guide les choix ; les composants du thème et de Boots
 
 Chaque maquette utilise le texte du brouillon validé et montre les vues écran/mobile et les états utiles. Les médias provisoires sont identifiés au responsable, hors du contenu final de l’apprenant. Montrer les états pertinents : avant/après achèvement, attente ou verrou si pertinent. Pour chaque activité requise, l'action et le déclencheur de la coche sont compréhensibles en amont ; l'état obtenu peut être constaté ensuite. Une attente de correction humaine ne doit pas être présentée comme une coche immédiate.
 
-Conserver dans le projet les **captures du rendu réel** : fournies par le responsable dans son site, ou automatiques dans un Moodle local quand l’environnement le permet. Un blocage de capture n’autorise pas son contournement ; le thème local peut différer. Les captures du site cible restent la validation finale du rendu. Identifier pour le responsable ce qui est simulé et ce qui est vérifié ; ne pas superposer les réserves au cours. L'essai visuel précoce de la section pilote vérifie le rendu et la conservation par l'éditeur ; la phase 4b vérifie le fonctionnement du cours complet. Faire approuver une adaptation qui change une maquette déjà validée.
+Conserver dans le projet les **captures du rendu réel** : fournies par le responsable dans son site, ou automatiques dans un Moodle local quand l’environnement le permet. Un blocage de capture n’autorise pas son contournement ; le thème local peut différer. Les captures du site cible restent la validation finale du rendu. Identifier pour le responsable ce qui est simulé et ce qui est vérifié ; ne pas superposer les réserves au cours. L'essai visuel précoce de la section pilote vérifie le rendu et la conservation par l'éditeur ; la phase 5 vérifie le fonctionnement du cours complet. Faire approuver une adaptation qui change une maquette déjà validée.
 
 Préférer les composants disponibles et styles autorisés ; une modification du thème ou du CSS global exige un périmètre de déploiement distinct du contenu éditorial. [Thèmes Moodle](https://moodledev.io/docs/5.0/apis/plugintypes/theme), [Bootstrap, si la version est applicable](https://getbootstrap.com/docs/5.3/).
 

@@ -7,6 +7,7 @@ Utiliser en phase 1 de la [démarche de cocréation](conception-cours.md). Le pl
 | Élément | À préciser et vérifier |
 |---|---|
 | Accueil | Section 0 avec bandeau, objectifs d’ensemble, déroulement, durée, conditions d’attestation, préparation, aide et suivi |
+| Repère de progression | Barre liée aux achèvements réels si un composant compatible est disponible ; périmètre expliqué et états initial/intermédiaire/final vérifiés. Repli par les indicateurs natifs, sans fausse barre statique |
 | Achèvement expliqué avant chaque activité requise | Action, déclencheur de la coche, retour, attente éventuelle ; état constatable après l'action |
 | Évaluation finale avec seuil | Test natif autocorrigé par défaut ; seuil justifié, tentatives, relecture et règle de passage explicites |
 | Attestation après réussite | Reprendre le modèle de référence approuvé ; vérifier plugin, restrictions et PDF |
@@ -17,6 +18,8 @@ Décider si la rétroaction conditionne l'attestation. Un Devoir peut compléter
 **Exemple :** accueil, pratique avec trace, test final avec seuil motivé, attestation et Feedback. **Contre-exemple :** supprimer test ou attestation faute de script. Nombre de sections, durée, seuil et données appartiennent au projet.
 
 ## Choisir les activités
+
+À l'accueil, personnaliser la salutation avec le prénom du compte connecté si le filtre RÉCIT est disponible ; sinon, conserver une salutation neutre. Lire [Accueil personnalisé et progression](personnalisation-progression.md) pour les composants, balises et limites. Aucun prénom réel dans le modèle générique et aucune installation requise chez l'utilisateur.
 
 Choisir selon l'apprentissage, puis déterminer le moyen dans [capacites.md](capacites.md). Le manque d'un générateur ne justifie pas de changer de véhicule pédagogique.
 

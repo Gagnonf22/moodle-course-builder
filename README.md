@@ -1,16 +1,16 @@
-# Concepteur de cours Moodle — 0.7.0
+# Concepteur de cours Moodle — 0.8.0
 
 Une skill en français pour les conseillers pédagogiques et les enseignants qui souhaitent concevoir, construire et vérifier des cours Moodle avec une IA. Elle réunit une démarche de cocréation, des procédures à consulter selon la tâche, des exemples fictifs et des outils de fabrication. Elle n'est ni un plugin Moodle ni un constructeur universel.
 
 ## Une démarche avec validation humaine
 
-Le travail suit les phases conception, brouillon, maquettes, finalisation, essai (4b), mise en production et maintenance. La personne responsable valide chaque passage ; des phases peuvent être fusionnées sur sa décision. Pour une petite modification, seules les phases pertinentes sont reprises.
+Le travail suit cinq passes : **1. Conception, 2. Brouillon fonctionnel, 3. Maquettes UX, 4. Finalisation, 5. Essai**. Le brouillon prépare réellement les activités et ressources ; son import dans le Moodle existant et le retour utilisateur précèdent les maquettes du cours, des documents et de l’attestation. La finalisation applique les choix validés. Mise en production et maintenance restent distinctes. La personne responsable valide chaque passage ; des phases peuvent être fusionnées sur sa décision. Pour une petite modification, seules les phases pertinentes sont reprises.
 
 Une section pilote permet de valider le contenu puis la direction visuelle avant de décliner le cours. Pour une nouvelle direction, l'IA propose deux ou trois variantes. Chaque section dispose ensuite d'une maquette HTML sur écran et mobile ; une forme allégée exige un accord humain. L'expérience utilisateur et l'accessibilité guident le choix des composants du thème.
 
 Le **socle par défaut** comprend l'accueil, l'explication de l'achèvement avant chaque activité requise, une évaluation finale avec seuil, une attestation après réussite et une rétroaction. Le plan confirme ce socle ou justifie les adaptations pour validation. Le contenu reste d’abord dans la description de section : H5P intégré pour s’entraîner sans conséquence, test natif autocorrigé pour évaluer, Devoir avec trace pour pratiquer, Glossaire pour le lexique. Page seulement pour une longue lecture, Livre rarement, Leçon à éviter. Reprendre par défaut direction visuelle et attestation du cours de référence approuvé ; l’expérience utilisateur se valide à chaque phase. Chaque choix indique la fabrication disponible et les manipulations manuelles nécessaires.
 
-Les nouvelles règles de conception ne livrent pas automatiquement leurs extensions techniques : consulter les capacités ; les développements UX restent en cours, non publiés.
+À chaque passage, l’IA annonce ce qui est prêt, provisoire, attendu pour validation et prévu ensuite. Les consignes de méthode ne créent pas de capacités techniques : consulter la matrice et annoncer dès la conception les opérations réellement automatisées ou manuelles. L’efficacité de cette conduite reste à valider sur un cours réel.
 
 Voir [Concevoir une section](references/concevoir-section.md), [la démarche complète](references/conception-cours.md), [le modèle de base](references/modele-cours-de-base.md) et [l'exemple de plan](assets/exemple-plan-cours.md).
 
@@ -31,21 +31,22 @@ Les statuts sont datés et limités à des opérations précises dans [la matric
 
 Les essais d'instance du 1er novembre 2026 ont utilisé Moodle **5.1.8+** et Custom certificate **5.0.11**, avec des comptes fictifs dans des cours masqués. Ils ne garantissent pas une autre version, un autre thème ou une installation de production. Le pack de langue installé n'a pas suffi à obtenir un affichage et une date PDF en français dans ces essais.
 
-## Ajouts locaux U2 non publiés
+## Ajouts U2
 
 Le contrat v5 ajoute Glossaire, pratique sans note avec fichiers de consigne, H5P intégré par défaut, contrôle HTML des sections, tentatives illimitées et conditions multiples de reconnaissance. Remise du Test et réussite sont séparables. Essais concrets du 2026-11-03 et limites dans [les capacités](references/capacites.md#u2--ressources-et-progression-2026-11-03). La restauration native sans utilisateurs omet les termes du Glossaire : l'étape CLI locale explicite fournie les reprend depuis les définitions transportées dans le `.mbz`.
 
 ## Prérequis
 
-La lecture de la skill et la conception documentaire ne demandent aucun serveur Moodle. Pour les outils, prévoir selon la tâche :
+**Aucune installation de Moodle ni aucun serveur web local ne sont requis pour utiliser la skill.** L'utilisateur importe/restaure les livrables compatibles dans son Moodle existant, dans un cours de test autorisé, puis transmet ses observations. La skill fournit les étapes et vérifications décrites dans [le parcours d'import](references/sauvegardes.md#parcours-utilisateur-sans-serveur-local). La fabrication automatique d'un cours complet dépend des outils disponibles ; les scripts natifs ci-dessous restent réservés au développement. Pour les outils hors ligne, prévoir selon la tâche :
 
 - **Python 3.13 ou plus récent**, pour les scripts Python et leurs tests ; ils utilisent la bibliothèque standard.
 - **FFmpeg**, pour encoder les vidéos et produire les affiches ; la chaîne a été testée avec la version 7.1. Voir [la procédure vidéo/H5P](references/chaine-video-h5p.md) pour la provenance et `FFMPEG_EXE`.
-- **PHP CLI** et une installation **Moodle 5.1 locale, isolée et autorisée**, pour les scripts sous `scripts/moodle/`. PHP doit satisfaire les exigences de la version Moodle installée. Les essais réels ont utilisé PHP 8.2.4 ; les tests par doublures, PHP 8.5.12. `PHP_BIN` sélectionne le binaire pour les tests.
-- **Custom certificate**, compatible avec l'instance, pour les opérations d'attestation ; ce plugin n'est pas fourni.
+- **Custom certificate**, déjà disponible et compatible avec le Moodle cible, pour une attestation utilisant ce plugin ; il n'est pas fourni. S'il manque, faire préciser une réalisation compatible avec le site.
 - Pour H5P, les médias et une sauvegarde de référence autorisée contenant les bibliothèques compatibles. La skill ne fournit pas ces bibliothèques et ne les télécharge pas automatiquement.
 
-Les scripts PHP sont des outils de validation locale avec privilèges : lire [leurs conditions d'exécution](references/automatisation.md) et [les contrats](references/contrat-structure.md) avant usage. Les contrats v1 à v5 restent pris en charge ; voir le [profil v5](references/contrat-experience-v5.md), dont l’étape complémentaire de restauration des termes du Glossaire. Aucun outil, compte ou serveur n'est installé par la copie de cette skill.
+**Développement de la skill seulement :** les scripts sous `scripts/moodle/` nécessitent PHP CLI et une instance Moodle locale isolée et autorisée, déjà disponible dans l'environnement de développement. PHP doit satisfaire les exigences de cette instance. Les essais réels ont utilisé PHP 8.2.4 ; les tests par doublures, PHP 8.5.12. `PHP_BIN` sélectionne le binaire pour les tests. Ces scripts privilégiés ne doivent pas être transférés sur le serveur de l'utilisateur ni leurs garde-fous levés pour permettre un import.
+
+Lire [leurs conditions d'exécution](references/automatisation.md) et [les contrats](references/contrat-structure.md) avant un essai de développement. Les contrats v1 à v5 restent pris en charge. Le [profil v5](references/contrat-experience-v5.md) ne fournit pas encore de fichier d'import natif des termes du Glossaire : prévoir une saisie manuelle ou une voie d'import vérifiée, sans demander de CLI à l'utilisateur. Aucun outil, compte ou serveur n'est installé par la copie de cette skill.
 
 ## Installation dans un agent local
 

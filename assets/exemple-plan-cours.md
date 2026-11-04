@@ -27,7 +27,7 @@ Chaque ligne identifie un élément dans la première colonne. Une section ou un
 | Attestation (`customcert`) — Télécharger l'attestation | Reconnaître la réussite avec le modèle approuvé | Certificat simplifié nouveau : écart visuel non autorisé | Accès après réussite du test final ; consulter selon le plan | Native v4 si le modèle est conservé, sinon retouche depuis modèle couvert ou voie manuelle validée. Conditions multiples disponibles en v5 ; prérequis et accès à essayer |
 | Feedback (`feedback`) — Donner son avis | Retour sur la formation, sans note | `questionnaire` si ses fonctions ne sont pas nécessaires ici | À l'envoi, selon configuration éprouvée ; ne conditionne pas l'attestation dans cet exemple | Fabriqué v4 ; décider identification/anonymat et vérifier sous rôle apprenant |
 
-Un lexique supplémentaire demanderait sa propre ligne `glossary` ; création manuelle tant que le nouveau profil n'est pas éprouvé. Aucun Livre ni Leçon nécessaire ici. Le jalon formatif est une **proposition motivée**, pas une approbation acquise ; le retirer si l'objectif et son risque ne le justifient pas.
+Un lexique supplémentaire demanderait sa propre ligne `glossary` ; profil v5 éprouvé localement, avec import des termes à prévoir selon la voie disponible dans le Moodle cible. Aucun Livre ni Leçon nécessaire ici. Le jalon formatif est une **proposition motivée**, pas une approbation acquise ; le retirer si l'objectif et son risque ne le justifient pas.
 
 **La construction attend la validation de ce tableau. Tout changement d'outil ultérieur revient au responsable avant exécution**, avec mise à jour de la ligne et de ses effets. Une limite du script ne vaut pas autorisation de substitution.
 
@@ -35,6 +35,6 @@ Socle prévu : accueil, coche expliquée, évaluation finale avec seuil, attesta
 
 ## Validations suivantes
 
-Phase 2 : rédiger le pilote puis les autres sections. Phase 3 : reprendre la direction approuvée, maquette par section écran/mobile avec captures réelles et réserves pour le responsable. Phase 4 : cours final sans média absent, composant vide ou code interne. Phase 4b : parcours apprenant, remise, états échec/réussite, PDF et navigation ; proposer une visite automatisée locale si disponible. Captures du site cible pour la validation finale du rendu. Toute visite d'un site réel et la mise en production demandent leur autorisation explicite.
+Phase 2 : préparer les activités et ressources du pilote puis du cours, faire importer le brouillon dans le Moodle existant et recueillir validation, commentaires et captures. Phase 3 : reprendre la direction approuvée, maquette par section écran/mobile, documents et attestation compris. Phase 4 : appliquer les maquettes aux objets du brouillon et finaliser les médias. Phase 5 : parcours apprenant, remise, états échec/réussite, PDF et navigation ; visite locale facultative pour le développement seulement. Captures du site cible pour la validation finale du rendu. Toute visite d'un site réel et la mise en production demandent leur autorisation explicite.
 
 Consigner date, phase, éléments et réserves dans le projet. Une forme légère de maquette ou une fusion de phases exige décision humaine. Aucun état dessiné n'est une preuve d'achèvement.

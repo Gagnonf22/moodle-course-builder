@@ -8,7 +8,9 @@ Tout atelier, laboratoire ou exercice pratique est un **Devoir avec remise d'une
 
 Choisir explicitement : **achèvement à la remise sans correction obligatoire** pour une pratique, ou **achèvement sur réussite** avec note suffisante pour un travail évalué. Dans le premier cas, une trace finalisée peut déclencher la coche sans attente d'un correcteur ; dans le second, montrer l'attente puis le résultat. Ne pas ajouter une grille et une charge de correction par défaut à toute pratique.
 
-**Exemple :** « Téléchargez le fichier joint, réalisez l'opération et remettez une capture ; la remise déclenche la coche ». **Contre-exemple :** Page « Atelier » avec auto-déclaration manuelle, sans canal de dépôt.
+Décrire aussi le processus de remise avec les canaux et libellés réellement configurés : obtenir le fichier si nécessaire, réaliser le travail, ouvrir « Ajouter un travail », saisir le texte ou déposer le fichier prévu, enregistrer puis soumettre/confirmer seulement si ces réglages l’exigent. Indiquer comment constater la remise et si la coche attend une correction.
+
+**Exemple, pour une remise de fichier sans confirmation supplémentaire :** « Téléchargez le fichier joint et réalisez l’opération. Cliquez sur Ajouter un travail, déposez votre capture, puis sur Enregistrer. Vérifiez que le fichier apparaît comme remis ; cette remise déclenche la coche ». **Contre-exemple :** Page « Atelier » avec auto-déclaration manuelle, sans canal de dépôt.
 
 Ces règles sont de conception. Le profil actuel doit être consulté dans [capacites.md](capacites.md) et le [contrat](contrat-structure.md) : le [profil v5](contrat-experience-v5.md) fournit les fichiers de consigne et le Devoir sans note à achèvement sur remise, éprouvés localement le 2026-11-03 ; vérifier encore les réglages du cours cible.
 

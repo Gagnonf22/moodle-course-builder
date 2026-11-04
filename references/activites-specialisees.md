@@ -4,6 +4,10 @@ Lire seulement la partie utile. **Statut :** modèles et dépendances observés 
 
 ## Forum et glossaire
 
+Un export XML natif de Glossaire peut compléter une sauvegarde sans utilisateurs : le fichier fourni dans un projet de validation a été importé par le formulaire Moodle 5.1.8+ avec 15 entrées et neuf fichiers intégrés dont les empreintes correspondent (2026-11-03). Cette preuve concerne l'import natif d'un export existant ; elle ne constitue pas un générateur XML v5 ni une garantie pour tous les contenus ou versions. Ne pas redemander un exemple déjà fourni : examiner d'abord les sources du projet.
+
+Pour livrer un Glossaire à l'utilisateur, suivre [le parcours sans serveur local](sauvegardes.md#parcours-utilisateur-sans-serveur-local) : fournir les définitions, annoncer la saisie manuelle ou l'import restant à vérifier, sans demander de CLI ni d'installation Moodle. L'étape locale v5 ci-dessous est un outil de développement, pas un prérequis utilisateur.
+
 Pour un **forum**, préciser ce qui doit être publié, à qui répondre, les règles de visibilité et le retour attendu. Créer le type de forum approprié, régler groupes, abonnements, évaluation et achèvement si utiles. Tester publication et réponse sous le rôle prévu ; une consigne de participation ne configure pas une condition d'achèvement.
 
 Pour un **glossaire**, décider si les entrées sont fournies ou produites par les participants. Définir structure d'une entrée, catégories, validation et commentaires selon le besoin. Si une contribution est attendue, essayer sa création et vérifier le compteur d'achèvement réellement configuré. Une liste de définitions importée ne prouve pas la contribution d'un apprenant. Le [profil v5](contrat-experience-v5.md) fabrique les termes fournis ; leur restauration sans utilisateurs demande l'étape complémentaire explicite documentée, éprouvée localement.

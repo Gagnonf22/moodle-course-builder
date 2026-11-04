@@ -4,7 +4,7 @@ Pour créer un cours, suivre cette démarche par défaut avec le [modèle de bas
 
 ## Valider les passages
 
-À chaque phase, présenter le livrable, les choix à trancher, les écarts au plan ou au modèle et les limites restantes. La personne responsable du cours valide avant la suivante. Consigner dans le `DECISIONS.md` du projet, ou son équivalent : date, phase, éléments approuvés et réserves. Son identité reste dans le projet, pas dans la skill.
+À chaque phase, annoncer ce qui est prêt, ce qui reste provisoire, la validation attendue et la suite. Présenter les choix à trancher et les écarts au plan ou au modèle. La personne responsable du cours valide avant la suivante. Consigner dans le `DECISIONS.md` du projet, ou son équivalent : date, phase, éléments approuvés et réserves. Son identité reste dans le projet, pas dans la skill.
 
 Les phases peuvent être fusionnées sur décision humaine, avec une validation couvrant explicitement leurs livrables. Une approbation de plan ou de maquette n'autorise pas la mise en production. Reprendre la validation touchée lorsqu'un changement modifie l'expérience approuvée, le sens du contenu ou les règles de note, d'achèvement ou d'accès. Une coquille sans effet sur ces éléments n'exige pas de recommencer le parcours.
 
@@ -34,19 +34,19 @@ Choisir une **section pilote** représentative d’une difficulté réelle. Repr
 
 **À valider :** tableau obligatoire par activité/ressource, socle confirmé ou écarts justifiés, choix du parcours et leur justification, répartition fabrication/manipulations manuelles, section pilote, modalités de suivi et contraintes ouvertes. Voir l'[exemple synthétique](../assets/exemple-plan-cours.md).
 
-## 2. Brouillon
+## 2. Brouillon fonctionnel
 
-Rédiger complètement la section pilote : contenu, consignes, questions, réponses/rétroactions, action attendue et conditions d'achèvement. Examiner d’abord les vidéos existantes, y compris en ligne, et fournir au moins une capture annotée pour chaque manipulation d’interface ; une intégration ou URL peut convenir sans nouveau média. Vérifier droits et accès, signaler au responsable les limites du constructeur. Pour une vidéo à produire, préparer le scénario ou découpage. Les cas d’exercice sont réalistes ; aucune mention de chantier ni bandeau « fictif » dans le contenu apprenant.
+Préparer les activités et ressources réelles de la section pilote : contenu, consignes, questions, réponses/rétroactions, documents, action attendue et conditions d'achèvement. Livrer les fichiers importables réellement réalisables et les opérations manuelles annoncées en conception ; un texte de cours seul ne constitue pas un brouillon fonctionnel. Configurer ou faire configurer notes, achèvement et restrictions nécessaires à son essai, dans le périmètre autorisé. Examiner d’abord les vidéos existantes, y compris en ligne, et fournir au moins une capture annotée pour chaque manipulation d’interface ; une intégration ou URL peut convenir sans nouveau média. Vérifier droits et accès, signaler au responsable les limites du constructeur. Pour une vidéo à produire, préparer le scénario ou découpage. Les cas d’exercice sont réalistes ; aucune mention de chantier ni bandeau « fictif » dans le contenu apprenant.
 
-Valider le fond de cette section avant de décliner les autres brouillons. Conserver les sources faciles à modifier ; ne pas fabriquer tous les médias définitifs avant validation. Une seule section pilote sera reprise en phase 3, sans créer un second prototype de contenu.
+Faire importer les livrables par l’utilisateur dans un cours de test autorisé de son Moodle existant ; guider les manipulations complémentaires. Faire parcourir le brouillon pour valider le fond et le fonctionnement, d’abord sur le pilote puis sur les autres sections. Recueillir commentaires et captures utiles aux maquettes ; un retour libre suffit. Conserver les sources modifiables et une présentation simple, lisible et accessible ; la finition des médias et du graphisme vient après ce retour. Signaler au responsable les éléments provisoires et limites de fabrication, hors des vues apprenant.
 
 **Contrôle UX :** KISS maintenu dans le brouillon ; choix d’activités cohérents ; titres d’action sans codes ; notes au responsable séparées ; consignes et rétroactions propres à chaque étape. Exemple : « Déposez votre capture » ; contre-exemple : « Réalisez cette étape » répété partout.
 
-**À valider :** exactitude, ton, charge et cohérence des activités de la section pilote, puis brouillons des autres sections.
+**À valider :** exactitude, ton, charge et fonctionnement des activités préparées, d’abord sur la section pilote puis sur le reste du cours ; commentaires et captures nécessaires à la passe UX. Sans import ou manipulation réalisée, annoncer ce qui reste à essayer avant ce passage.
 
-## 3. Maquettes
+## 3. Maquettes UX
 
-Partir des besoins des apprenants : hiérarchie visuelle, repérage, lisibilité, action principale, aide, accessibilité et usage mobile. Bootstrap et le thème sont des moyens techniques ; leur apparence par défaut ne définit pas la direction graphique.
+Partir du contenu et du fonctionnement validés au brouillon, des captures du site cible et des besoins des apprenants : hiérarchie visuelle, repérage, lisibilité, action principale, aide, accessibilité et usage mobile. Inclure les documents PDF/Word et l’attestation dans cette passe ; reprendre les références approuvées. Distinguer amélioration éditoriale, comportement natif et fonction non vérifiée avant de proposer une correction. Bootstrap et le thème sont des moyens techniques ; leur apparence par défaut ne définit pas la direction graphique.
 
 Pour une nouvelle direction, présenter **deux ou trois propositions sur la même section pilote**, avec le contenu brouillon validé. Si une direction de référence est déjà approuvée, la reprendre par défaut et présenter seulement les adaptations nécessaires. Après le choix, essayer son HTML dans le thème et l'éditeur cibles si l'accès et l'autorisation existent, avant la déclinaison.
 
@@ -60,31 +60,33 @@ Partir de **captures du rendu réel** : captures fournies dans le site cible par
 
 **Contrôle UX :** vues écran/mobile simples ; activités utiles ; titres lisibles sans doublons ; aucune note de chantier dans les vues apprenant ; texte spécifique, aucun composant vide. Exemple : capture du pilote réellement rendu ; contre-exemple : maquette seule présentée comme preuve Moodle.
 
-**À valider :** direction choisie, maquettes de chaque section, adaptations et limites. Le test de présentation ne remplace pas l'essai fonctionnel 4b. Voir [qualite-validation.md](qualite-validation.md).
+**À valider :** direction choisie, maquettes de chaque section, adaptations et limites. Le test de présentation ne remplace pas l'essai fonctionnel de phase 5. Voir [qualite-validation.md](qualite-validation.md).
 
 ## 4. Finalisation
 
-Produire les ressources et activités choisies, l'évaluation finale, l'attestation et la rétroaction selon le plan approuvé. Pour les vidéos/H5P retenus, produire médias, sous-titres relus et paquets nécessaires. Choisir les moyens réellement disponibles dans [capacites.md](capacites.md) ; une procédure documentée n'implique pas un générateur livré. Réaliser ou faire réaliser les créations manuelles annoncées dans le périmètre autorisé. Réutiliser le HTML des maquettes compatibles au lieu de reconstruire la présentation sans raison.
+Appliquer les maquettes approuvées aux activités et ressources du brouillon, y compris documents et attestation. Finaliser les médias et sous-titres retenus ; réutiliser le HTML compatible et les objets déjà préparés, sans reconstruction sans raison. Compléter les manipulations manuelles annoncées avec les moyens de [capacites.md](capacites.md) ; une procédure documentée n'implique pas un générateur livré. Tout changement significatif du contenu, d’outil ou de direction revient à validation.
 
-Configurer notes, passage, achèvement, accès et dépendances séparément. Conserver les sources et préparer la sauvegarde/livraison de validation. Présenter tout changement affectant un choix déjà approuvé.
+Vérifier séparément notes, passage, achèvement, accès et dépendances déjà préparés au brouillon. Conserver les sources et préparer la sauvegarde/livraison de validation. Présenter tout changement affectant un choix déjà approuvé.
 
 **Contrôle UX :** relecture du parcours complet selon [Concevoir une section](concevoir-section.md) : KISS, véhicules adaptés, titres sans codes, deux publics séparés, absence de remplissage répété et de composants vides. Exemple : consigne et pièces dans le Devoir ; contre-exemple : lien vers un média absent. Le futur contrôle automatique ne remplace pas cette relecture et n’est pas encore livré.
 
 **À valider :** cours complet et fichiers préparés, écarts résolus ou explicités, préparation de l'essai. Aucun déploiement n'est déduit de cette validation.
 
-## 4b. Essai
+## 5. Essai
 
-Dans un cours de test masqué autorisé, restaurer si pertinent et essayer **tout le parcours**, pas seulement la section pilote : réussite et échec avec rôle apprenant, fichiers/liens, notes, achèvement, restrictions, attestation et rétroaction, clavier et mobile. Ajouter l'état d'attente lorsqu'une correction humaine intervient.
+Le parcours normal consiste à faire importer/restaurer les livrables par l'utilisateur dans un cours de test autorisé de son Moodle existant, puis à recueillir les résultats de la fiche d'essai et à corriger. Ne pas demander d'installation de serveur local ; voir [le parcours d'import](sauvegardes.md#parcours-utilisateur-sans-serveur-local).
+
+Dans un cours de test autorisé avec accès apprenant prévu, restaurer si pertinent et essayer **tout le parcours**, pas seulement la section pilote : réussite et échec avec rôle apprenant, fichiers/liens, notes, achèvement, restrictions, attestation et rétroaction, clavier et mobile. Ajouter l'état d'attente lorsqu'une correction humaine intervient.
 
 Comparer les résultats aux critères du plan ; corriger et reprendre les contrôles touchés. Si l'environnement manque, la phase reste incomplète et ses fonctions non testées sont annoncées ; aucune réussite n'est supposée à partir du HTML ou du XML.
 
-Quand l'environnement le permet, **proposer**, sans l'imposer, une visite automatisée dans le Moodle local : compte apprenant de test, vues écran et téléphone, parcours scripté des sections/activités, captures et relevé du texte de contenu. Examiner accueil, repérage, dépliants et actions, état de la coche et affichage du nom du cours. Ne pas inclure de paramètres de session dans les traces. Le navigateur ou ses outils peuvent être indisponibles : consigner alors les limites et proposer une visite manuelle, sans contourner les restrictions. Les captures du responsable dans le site cible restent la validation finale du rendu ; toute visite d'un site réel exige son autorisation explicite.
+Pour le développement de la skill, une visite automatisée dans une instance locale déjà disponible et autorisée reste facultative ; elle ne justifie pas d'en installer une chez l'utilisateur. Utiliser un compte apprenant de test, des vues écran et téléphone et un parcours des sections/activités. Examiner accueil, repérage, dépliants et actions, état de la coche et affichage du nom du cours. Ne pas inclure de paramètres de session dans les traces. Si les outils manquent, consigner les limites sans contourner les restrictions. Les observations et captures du responsable dans le site cible restent la validation finale ; toute visite automatisée d'un site réel exige son autorisation explicite.
 
 **Contrôle UX :** sous rôle apprenant, compter les changements de page utiles, vérifier adéquation des activités et repérage par les titres, absence de notes au responsable et de phrases génériques. Exemple : une trace remise donne l’état configuré ; contre-exemple : une Page cochée censée prouver une remise. Conserver les limites d’essai dans le projet.
 
 **À valider :** résultats observés, corrections, limites restantes et décision de préparation à la production.
 
-## 5. Mise en production
+## Mise en production
 
 Présenter la cible, l'opération, les effets et le retour prévu. Obtenir l'autorisation explicite de la personne responsable pour cette mise en production. Privilégier un nouveau cours pour restaurer ; sauvegarder le cours existant avant restauration ou mise à jour et adapter le retour au risque.
 
@@ -92,7 +94,7 @@ Pour un cours avec participants, analyser les effets sur contenus, tentatives, n
 
 Après l'opération autorisée, vérifier les fonctions essentielles dans la destination et fournir un bilan. **Contrôle UX :** confirmer le repérage, les liens, le parcours et les états réellement visibles ; comparer aux captures approuvées, sans introduire de notes de chantier. Une instruction de préparation de fichiers n'autorise pas cette phase.
 
-## 6. Maintenance
+## Maintenance
 
 **Contrôle UX :** examiner les retours d’usage, préserver les choix approuvés et vérifier que la modification n’ajoute ni navigation inutile ni contenu générique ; faire valider les adaptations qui changent le parcours.
 

@@ -4,6 +4,8 @@ Lire lorsqu'une action doit compter, débloquer une suite ou permettre une attes
 
 ## Définir les états attendus
 
+Le modèle comprend un repère d'avancement adapté aux composants disponibles ; lire [Accueil personnalisé et progression](personnalisation-progression.md). La barre reflète les achèvements configurés et ne prouve ni réussite ni maîtrise ; contrôler séparément les conditions de reconnaissance.
+
 Dans le plan du cours, décrire l'action observable et le résultat attendu pour chaque activité suivie : consulter, remettre, obtenir une note, réussir, contribuer ou déclarer manuellement. Choisir une condition offerte par le composant et cohérente avec cette action. Décrire à part les conditions d'achèvement du cours.
 
 Pour une note, préciser maximum, passage et agrégation nécessaires. Un pourcentage configuré à l'intérieur d'un H5P ne règle pas automatiquement le passage Moodle. Une remise de Devoir peut précéder sa correction ; éviter un verrou qui suppose une note instantanée si personne ne la fournit.
@@ -13,7 +15,7 @@ Construire les activités référencées avant de configurer les dépendances. C
 ## Attestation
 
 1. Identifier le composant exact, par exemple `customcert`, et sa version. Il s'agit d'un plugin ; ne pas supposer sa présence.
-2. Reprendre par défaut **le modèle d’attestation du cours de référence approuvé**, puis adapter contenu, éléments dynamiques, dépendances et fichiers/polices. Ne pas remplacer ce modèle par une présentation simplifiée pour satisfaire le constructeur. Les noms réels et éléments institutionnels restent dans le projet.
+2. Reprendre par défaut **le modèle d’attestation du cours de référence approuvé**, puis adapter contenu, éléments dynamiques, dépendances et fichiers/polices. Ne pas remplacer ce modèle par une présentation simplifiée pour satisfaire le constructeur. Inclure sa présentation dans les maquettes UX, puis vérifier le PDF final. Les noms réels et éléments institutionnels restent dans le projet.
 3. Configurer l'accès selon les exigences approuvées : note, achèvement ou autres critères disponibles. Ne pas supposer qu'une note de passage déclenche à elle seule une émission.
 4. Essayer l'accès avant admissibilité, puis après. Ouvrir l'activité, télécharger le PDF, vérifier contenu, mise en page et comportement d'un second accès si cela compte pour le besoin.
 5. Vérifier séparément les fonctions de vérification publique, de réémission ou de notification si elles sont requises ; ne pas les déduire d'un PDF réussi.
