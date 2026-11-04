@@ -1,6 +1,6 @@
 # Historique
 
-## 0.8.0 — Préparée le 2026-11-04, publication en attente
+## 0.8.0 — 2026-11-04
 
 - Cinq passes cohérentes : conception, brouillon fonctionnel importé et commenté, maquettes UX, finalisation, essai. Annonce du prêt/provisoire/validation/suite dès l’entrée de la skill ; mise en production distincte.
 - Fabrication placée au brouillon, puis UX sur contenu validé et captures, documents et attestation compris. Consignes de remise adaptées aux réglages et relecture proportionnée au stade du livrable.
