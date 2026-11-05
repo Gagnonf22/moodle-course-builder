@@ -1,4 +1,4 @@
-# Concepteur de cours Moodle — 0.8.0
+# Concepteur de cours Moodle — 0.8.1
 
 Une skill en français pour les conseillers pédagogiques et les enseignants qui souhaitent concevoir, construire et vérifier des cours Moodle avec une IA. Elle réunit une démarche de cocréation, des procédures à consulter selon la tâche, des exemples fictifs et des outils de fabrication. Elle n'est ni un plugin Moodle ni un constructeur universel.
 

@@ -12,6 +12,12 @@ Un contrôle automatique de signalements est prévu mais non livré à ce stade.
 
 Pour le futur contrôle automatique, **séparer les champs analysés** : contenu des sections et activités pour les répétitions, en excluant menus et navigation ; noms complets/abrégés du cours et titres d'activités contrôlés à part. Exemple : un titre répété dans le menu n'est pas une répétition rédactionnelle ; un code de chantier dans le nom abrégé reste un signalement. Cette exigence d'étalonnage est prévue pour U3, pas implémentée ici.
 
+## Diagnostiquer et réparer un dysfonctionnement
+
+Partir du symptôme et de l’action attendue, puis chercher un cas connu dans la référence du composant ; pour des boutons H5P sans texte/icône, voir [le cas documenté](retouches-activites.md#boutons-h5p-vides-après-import). Distinguer ce qui est constaté, supposé et encore inconnu. Proposer le plus petit essai réversible utile ; l’agent exécute ce qui est autorisé et donne à l’utilisateur uniquement les manipulations indispensables dans son Moodle existant, avec le résultat attendu. Continuer les tâches indépendantes déjà autorisées.
+
+Conserver l’original et les éléments nécessaires au retour avant une modification. Vérifier les fonctions touchées après l’essai ; annoncer séparément contournement fonctionnel, cause confirmée et réparation durable. Si l’essai échoue, relever l’erreur et choisir le prochain contrôle qui départage les causes, plutôt que répéter sans nouvel indice. Corriger le contenu ou la fabrication quand les preuves les mettent en cause ; une intervention sur les bibliothèques partagées ou le site exige son autorisation propre. Les preuves restent dans le projet, les enseignements adoptés dans la référence utile.
+
 ## Avant l'instance
 
 Contrôler les fichiers et liens, formats attendus, intégrité des médias, dépendances et paramètres fonctionnels. Relire les questions et sous-titres sur le fond. Les scripts de la chaîne ont des tests locaux ; leur succès ne remplace ni la relecture pédagogique ni un essai Moodle.

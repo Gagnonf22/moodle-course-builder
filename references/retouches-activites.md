@@ -19,6 +19,20 @@ Le profil exige activités et sections visibles, résumé HTML et un paquet int�
 
 Les notes, tentatives et conditions d'achèvement ne sont pas réécrites. Le filtre, l'éditeur, le suivi et la résolution des contextes restent à essayer après restauration ; voir [h5p-integration.md](h5p-integration.md).
 
+## Boutons H5P vides après import
+
+**Symptôme :** un Question Set affiche un bouton de navigation vide, ou certains pictogrammes manquent après import/restauration. La présence du paquet, des textes français ou des polices ne prouve pas leur rendu. Ne pas attribuer d’emblée le défaut au thème ; vérifier boutons visibles, langue, clavier et fonctionnement avant toute ouverture dans l’éditeur.
+
+**Premier essai à proposer à l’utilisateur, dans une copie de test autorisée, en conservant l’original :** « Ouvrez *Modifier le contenu H5P*, puis enregistrez sans changer les questions. Rouvrez l’exercice et vérifiez que les boutons Suivant, Retour et Terminer sont lisibles. Terminez une tentative pour contrôler aussi le résultat et l’achèvement. » Ne pas confondre cet éditeur avec les seuls paramètres de l’activité Moodle. Cet essai peut réparer le rendu, mais l’enregistrement peut aussi migrer le contenu et ses bibliothèques ; ne pas le présenter comme une opération sans effet ou une solution garantie.
+
+Si le rendu revient, faire vérifier la langue et les fonctions touchées, annoncer le contournement et conserver si utile un export après enregistrement pour diagnostiquer la cause. S’il reste défectueux, demander seulement la capture ou le message utile ; comparer en lecture seule les versions effectivement utilisées, les paramètres et dépendances du paquet, puis les styles/polices chargés si les premières preuves ne suffisent pas. Aucun serveur local ou accès administrateur à demander par défaut ; aucun changement global ni purge générale de cache sur une simple hypothèse.
+
+**Cas vérifié le 2026-11-04 :** réenregistrement suivi d’une migration QuestionSet **1.20.31 → 1.21.14**, Question **1.5.15 → 1.5.53** et ajout de `H5P.Components`, sans changement des questions, bonnes réponses, seuil ni UUID. L’ancien QuestionSet crée la navigation avec texte visible vide et icônes CSS ; la version récente utilise une navigation Components. Un mélange de générations est fortement étayé pour le symptôme observé ; la pile chargée avant réenregistrement n’a pas été capturée, donc ce n’est pas une cause universelle démontrée.
+
+**Réparation de fabrication à examiner :** choisir un ensemble de bibliothèques compatible avec le site, respecter manifeste et schéma de chaque champ, puis essayer l’import avant réenregistrement. Pour la navigation récente, `texts.next` / `texts.previous` sont les libellés visibles ; `nextButton` / `prevButton` seuls ne les remplacent pas et peuvent laisser « Next » / « Previous » par défaut. Ajouter ces champs ne répare pas à lui seul une ancienne bibliothèque qui les ignore. Le HTML doit rester limité aux balises autorisées ; `overallFeedback.feedback` attend du texte simple. Conserver les réponses, seuils et identifiants stables, puis refaire les contrôles touchés. [Paramètres officiels de QuestionSet](https://github.com/h5p/h5p-question-set/blob/master/semantics.json).
+
+Cette procédure guide le diagnostic ; aucun correcteur automatique interversions n’est livré. Les versions du site cible et le résultat du contournement restent à vérifier pour chaque cas.
+
 ## Ajouter une attestation depuis une référence explicite
 
 Le modèle de présentation et la version du plugin proviennent d'une activité `customcert` choisie dans une autre sauvegarde. Les contenus du modèle restent des données du projet, pas des constantes dans le script. Profil actuel : **une page, une image de fond PNG**, éléments `bgimage`, `image` (logo/signature PNG), `studentname`, `date` de délivrance, `code`, `text` ou `coursename`, avec éléments directement sous la page. Une autre structure/version doit être examinée ; aucun support universel de Custom certificate n'est annoncé.

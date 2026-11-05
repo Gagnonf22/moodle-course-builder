@@ -41,7 +41,7 @@ Choisir la voie réellement disponible : préparation de fichiers, retouche de c
 | Salutation par prénom et barre de progression | [personnalisation-progression.md](references/personnalisation-progression.md) ; prévoir les replis sans composant RÉCIT |
 | Examiner, modifier, sauvegarder ou restaurer un .mbz | [sauvegardes.md](references/sauvegardes.md) ; [retouches H5P/attestation](references/retouches-activites.md) ; socle technique : [mbz-retouches-locales.md](references/mbz-retouches-locales.md) |
 | Choisir une API, un connecteur ou un script privilégié | [automatisation.md](references/automatisation.md) ; [contrat de vérification](references/contrat-structure.md) ; [contrat v5](references/contrat-experience-v5.md) pour ressources et progression |
-| Mettre en forme, vérifier l'accessibilité et essayer le cours | [qualite-validation.md](references/qualite-validation.md) |
+| Mettre en forme, essayer le cours ou diagnostiquer un dysfonctionnement | [qualite-validation.md](references/qualite-validation.md) ; [boutons H5P vides après import](references/retouches-activites.md#boutons-h5p-vides-après-import) |
 
 ## Contraintes qui changent la réalisation
 

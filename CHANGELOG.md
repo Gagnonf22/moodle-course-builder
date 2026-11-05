@@ -1,5 +1,10 @@
 # Historique
 
+## 0.8.1 — 2026-11-04 — Diagnostic des dysfonctionnements H5P
+
+- Démarche ciblée : symptôme, cas connu, essai réversible, vérification et distinction entre contournement et réparation de fabrication.
+- Boutons QuestionSet vides : réenregistrement dans une copie de test, contrôle du rendu et du suivi, comparaison des bibliothèques et champs de navigation. Portée des preuves et limites explicites ; aucun correcteur automatique ni intervention globale ajouté.
+
 ## 0.8.0 — 2026-11-04
 
 - Cinq passes cohérentes : conception, brouillon fonctionnel importé et commenté, maquettes UX, finalisation, essai. Annonce du prêt/provisoire/validation/suite dès l’entrée de la skill ; mise en production distincte.
