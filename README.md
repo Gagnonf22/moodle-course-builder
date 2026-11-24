@@ -1,5 +1,7 @@
 # Concepteur de cours Moodle — 0.8.1
 
+> **Désuète depuis le 2026-11-24.** Cette skill est remplacée par le dépôt `concepteur-cours-moodle`, reconstruit à partir de modèles `.mbz`. Elle reste consultable, mais elle n'évolue plus. Son nom d'installation devient `concepteur-cours-moodle-desuet`.
+
 Une skill en français pour les conseillers pédagogiques et les enseignants qui souhaitent concevoir, construire et vérifier des cours Moodle avec une IA. Elle réunit une démarche de cocréation, des procédures à consulter selon la tâche, des exemples fictifs et des outils de fabrication. Elle n'est ni un plugin Moodle ni un constructeur universel.
 
 ## Une démarche avec validation humaine
@@ -50,20 +52,20 @@ Lire [leurs conditions d'exécution](references/automatisation.md) et [les contr
 
 ## Installation dans un agent local
 
-Copier **tout le dossier**, en le nommant `concepteur-cours-moodle`, dans le dossier de skills de l'agent ; `SKILL.md` doit être directement à sa racine. Ne pas copier seulement ce fichier et ne pas ajouter un niveau de dossier supplémentaire.
+Copier **tout le dossier**, en le nommant `concepteur-cours-moodle-desuet`, dans le dossier de skills de l'agent ; `SKILL.md` doit être directement à sa racine. Ne pas copier seulement ce fichier et ne pas ajouter un niveau de dossier supplémentaire.
 
 | Agent | Emplacement personnel de la copie |
 |---|---|
-| Codex | `~/.agents/skills/concepteur-cours-moodle/` |
-| Claude Code | `~/.claude/skills/concepteur-cours-moodle/` |
+| Codex | `~/.agents/skills/concepteur-cours-moodle-desuet/` |
+| Claude Code | `~/.claude/skills/concepteur-cours-moodle-desuet/` |
 
 `~` représente le dossier personnel. Les installations limitées à un projet utilisent respectivement `.agents/skills/` et `.claude/skills/` dans ce projet. Vérifier les emplacements pris en charge par sa version dans les documentations officielles [Codex](https://developers.openai.com/codex/skills/) et [Claude Code](https://code.claude.com/docs/en/skills).
 
-Ouvrir une nouvelle session et demander explicitement à l'agent d'utiliser `concepteur-cours-moodle`, puis vérifier qu'il lit la démarche et les capacités pertinentes. La détection automatique dépend de l'agent et n'est pas garantie par les tests des scripts. L'installation dans un agent hébergé peut utiliser un autre mécanisme.
+Ouvrir une nouvelle session et demander explicitement à l'agent d'utiliser `concepteur-cours-moodle-desuet`, puis vérifier qu'il lit la démarche et les capacités pertinentes. La détection automatique dépend de l'agent et n'est pas garantie par les tests des scripts. L'installation dans un agent hébergé peut utiliser un autre mécanisme.
 
 ## Première utilisation et tests
 
-Exemple de demande : « Utilise concepteur-cours-moodle pour proposer le plan d'un cours de 45 minutes. Justifie les activités et distingue ce que tu peux fabriquer des créations manuelles. Attends ma validation avant le brouillon. »
+Exemple de demande : « Utilise concepteur-cours-moodle-desuet pour proposer le plan d'un cours de 45 minutes. Justifie les activités et distingue ce que tu peux fabriquer des créations manuelles. Attends ma validation avant le brouillon. »
 
 Conserver les contenus, médias, décisions et sorties dans un **dossier de projet distinct**. Les exemples dans `assets/` sont fictifs ; les médias référencés doivent être fournis par le projet. Commencer par la référence utile dans [SKILL.md](SKILL.md), sans charger toute la documentation.
 

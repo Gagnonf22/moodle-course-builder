@@ -1,5 +1,5 @@
 ---
-name: concepteur-cours-moodle
+name: concepteur-cours-moodle-desuet
 description: Créer un cours Moodle, le concevoir, le réviser ou examiner une sauvegarde .mbz. Utiliser pour préparer le parcours et les maquettes, une vidéo interactive H5P, un test, un devoir, une attestation ou la rétroaction ; choisir les activités, configurer le suivi et vérifier une restauration. Fournit des procédures et des outils dont la portée de fabrication est précisée par capacité.
 ---
 
